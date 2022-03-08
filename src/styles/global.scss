@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+$white: #ffffff;
+$WhiteGray: rgb(255, 255, 255, 0.5);
+$black: #000000;
+$black100: #101010;
+$black200: #1c1c1c;
+
 *,
 *::before,
 *::after {
@@ -9,4 +15,5 @@ body {
   padding: 0;
   margin: 0;
   background-color: #000000;
+  font-family: "Lato", sans-serif;
 }
