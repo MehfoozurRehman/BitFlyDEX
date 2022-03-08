@@ -1,0 +1,143 @@
+.header {
+  width: 100%;
+  max-width: 1440px;
+  padding: 1.5em 2em;
+  position: absolute;
+  top: 0px;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5em;
+}
+.header__logo__img {
+  width: 150px;
+}
+.header__menu {
+  display: none;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+.header__link {
+  position: relative;
+  padding: 1em 1.5em;
+  font-size: 16px;
+  color: $white;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.header__link:hover {
+  transition: 300ms ease-in-out;
+  color: #ebebeb;
+}
+.header__link svg {
+  margin-left: 1em;
+  margin-top: 0.2em;
+}
+.header__link__dropdown {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  background-color: $black100;
+  top: 45px;
+  left: 0px;
+  padding: 1em;
+  border-radius: 10px;
+  width: 250px;
+}
+.header__link__dropdown__entry {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+.header__link__dropdown__entry:hover {
+  transition: 300ms ease-in-out;
+  background-color: $black200;
+}
+.header__link__dropdown__entry__heading {
+  font-size: 13px;
+  color: $white;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+.header__link__dropdown__entry__info {
+  font-size: 12px;
+  color: $WhiteGray;
+}
+.header__link:hover .header__link__dropdown {
+  display: flex;
+}
+.header__link__button {
+  padding: 0.8em 2.5em;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  border: 1px solid $white;
+  cursor: pointer;
+}
+.header__link__button svg {
+  margin-left: 1em;
+  margin-top: -0.1em;
+}
+.header__link__button__primary {
+  background-color: $white;
+  color: $black;
+  margin: 0em 1em;
+}
+.header__link__button__primary:hover {
+  transition: 300ms ease-in-out;
+  background-color: #ebebeb;
+}
+.header__link__button__secondary {
+  background-color: transparent;
+  color: $white;
+}
+.header__link__button__secondary:hover {
+  transition: 300ms ease-in-out;
+  background-color: $white;
+  color: $black;
+}
+@media (max-width: 1200px) {
+  .header__menu {
+    display: flex;
+  }
+  .header__nav {
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    background-color: $black;
+    width: 100%;
+    padding-bottom: 2em;
+  }
+  .header__link {
+    width: 100%;
+    padding: 1em 0em;
+    flex-direction: column;
+  }
+  .header__link__heading {
+    width: 100%;
+  }
+  .header__link__dropdown {
+    top: 20px;
+    left: -30px;
+    flex-direction: row;
+    z-index: 100;
+    width: 100%;
+    position: relative;
+    flex-wrap: wrap;
+  }
+  .header__link__dropdown__entry {
+    width: 300px;
+  }
+}
