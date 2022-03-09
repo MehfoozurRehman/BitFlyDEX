@@ -313,12 +313,119 @@
   font-weight: 600;
   font-size: 18px;
 }
+.why__us__container {
+  width: 100%;
+  height: fit-content;
+  min-height: 70vh;
+  max-width: 1440px;
+  padding: 2em;
+  margin: 0px auto;
+}
+.why__us__container__heading {
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $white;
+}
+.why__us__container__content__card {
+  padding: 2em;
+  background: $black100;
+  width: 300px;
+  height: fit-content;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 14px;
+  margin: 4em 0em;
+}
+.why__us__container__content__card__img {
+  width: 120px;
+}
+.why__us__container__content__card__heading {
+  font-size: 20px;
+  color: $white;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0.7em 0em;
+}
+.why__us__container__content__card__para {
+  font-size: 16px;
+  color: $white;
+}
+.swiper-pagination-bullet {
+  color: $white !important;
+  background: $white !important;
+}
+.keep__trading__container {
+  width: 100%;
+  height: fit-content;
+  min-height: 60vh;
+  background: $black100;
+}
+.keep__trading__container__content {
+  width: 100%;
+  max-width: 1440px;
+  height: fit-content;
+  padding: 2em;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.keep__trading__container__content__img {
+  width: 550px;
+}
+.keep__trading__container__content__right {
+  width: 50%;
+}
+.keep__trading__container__content__right__heading {
+  font-size: 30px;
+  color: $white;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 90%;
+}
+.keep__trading__container__content__right__para {
+  font-size: 16px;
+  color: $WhiteGray;
+  margin-top: 1.5em;
+}
+.keep__trading__container__content__right__btn__wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 2em;
+}
+.keep__trading__container__content__right__btn__img {
+  width: 150px;
+}
+.keep__trading__container__content__right__btn {
+  margin-right: 1em;
+}
 @media (max-width: 1200px) {
   .home__jumbotron__right__heading {
     font-size: 30px;
   }
 }
 @media (max-width: 1000px) {
+  .keep__trading__container__content {
+    flex-direction: column;
+  }
+  .keep__trading__container__content__right {
+    width: 100%;
+    text-align: center;
+    margin-top: 2em;
+  }
+  .keep__trading__container__content__right__heading {
+    width: 100%;
+  }
+  .keep__trading__container__content__right__btn__wrapper {
+    justify-content: center;
+  }
   .tokenomics__container__card {
     flex-direction: column;
   }
@@ -374,6 +481,9 @@
   }
 }
 @media (max-width: 500px) {
+  .keep__trading__container__content__img {
+    width: 300px;
+  }
   .tokenomics__container__img {
     width: 300px;
   }
