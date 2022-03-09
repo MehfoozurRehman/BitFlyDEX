@@ -117,45 +117,72 @@ function POSICardEntry({ title, price }) {
   );
 }
 
+function StackTokenCard() {
+  return (
+    <div className="decentralized__trading__sub__cards__wrapper__left__card">
+      Hello
+    </div>
+  );
+}
+
+function NFTCard() {
+  return (
+    <div className="decentralized__trading__sub__cards__wrapper__left__card">
+      Hello2
+    </div>
+  );
+}
+
 export default function DecentralizedTrading() {
   return (
-    <div className="decentralized__trading__main__container">
-      <div className="decentralized__trading__main__container__heading">
-        The Next-Gen Decentralized Trading Protocol with its own Ecosystem .
-      </div>
-      <div className="decentralized__trading__main__container__para">
-        Farm, Stake with high yield, Cast, Buy and Sell NFTs, Participate in
-        Governance and Trade on-chain Derivatives.
-      </div>
-      <div className="decentralized__trading__locked__value__card">
-        <div className="decentralized__trading__locked__value__card__header">
-          <div className="decentralized__trading__locked__value__card__header__left">
-            <div className="decentralized__trading__locked__value__card__header__left__sub__heading">
-              Total Value Locked
+    <>
+      <div className="decentralized__trading__main__container">
+        <div className="decentralized__trading__main__container__heading">
+          The Next-Gen Decentralized Trading Protocol with its own Ecosystem .
+        </div>
+        <div className="decentralized__trading__main__container__para">
+          Farm, Stake with high yield, Cast, Buy and Sell NFTs, Participate in
+          Governance and Trade on-chain Derivatives.
+        </div>
+        <div className="decentralized__trading__locked__value__card">
+          <div className="decentralized__trading__locked__value__card__header">
+            <div className="decentralized__trading__locked__value__card__header__left">
+              <div className="decentralized__trading__locked__value__card__header__left__sub__heading">
+                Total Value Locked
+              </div>
+              <div className="decentralized__trading__locked__value__card__header__left__heading">
+                $76,709,483.41
+              </div>
             </div>
-            <div className="decentralized__trading__locked__value__card__header__left__heading">
-              $76,709,483.41
+            <div className="decentralized__trading__locked__value__card__header__center">
+              <POSICard />
+            </div>
+            <div className="decentralized__trading__locked__value__card__header__right">
+              <POSICard />
             </div>
           </div>
-          <div className="decentralized__trading__locked__value__card__header__center">
-            <POSICard />
-          </div>
-          <div className="decentralized__trading__locked__value__card__header__right">
-            <POSICard />
+          <div className="decentralized__trading__main__container__divider"></div>
+          <div className="decentralized__trading__main__container__footer">
+            <POSICardEntry title="POSI Holders" price="372,072" />
+            <POSICardEntry title="Circulating Supply" price="372,072,957.91" />
+            <POSICardEntry title="Pending Rewards" price="$85,980.71" />
+            <POSICardEntry
+              title="Total RFI redistributions"
+              price="$5,741,410.71"
+            />
+            <POSICardEntry title="Total Buyback & burn" price="Coming Soon" />
           </div>
         </div>
-        <div className="decentralized__trading__main__container__divider"></div>
-        <div className="decentralized__trading__main__container__footer">
-          <POSICardEntry title="POSI Holders" price="372,072" />
-          <POSICardEntry title="Circulating Supply" price="372,072,957.91" />
-          <POSICardEntry title="Pending Rewards" price="$85,980.71" />
-          <POSICardEntry
-            title="Total RFI redistributions"
-            price="$5,741,410.71"
-          />
-          <POSICardEntry title="Total Buyback & burn" price="Coming Soon" />
+      </div>
+      <div className="decentralized__trading__sub__cards__wrapper">
+        <div className="decentralized__trading__sub__cards__wrapper__left">
+          <StackTokenCard />
+        </div>
+        <div className="decentralized__trading__sub__cards__wrapper__right">
+          <NFTCard />
+          <NFTCard />
         </div>
       </div>
-    </div>
+    </>
   );
 }

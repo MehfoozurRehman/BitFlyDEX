@@ -161,6 +161,21 @@
   font-weight: 600;
   margin-top: 0.2em;
 }
+.decentralized__trading__sub__cards__wrapper {
+  width: 100%;
+  max-width: 1440px;
+  height: fit-content;
+  padding: 2em;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.decentralized__trading__sub__cards__wrapper__right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 @media (max-width: 1200px) {
   .decentralized__trading__main__container__footer__col {
     width: 33%;
