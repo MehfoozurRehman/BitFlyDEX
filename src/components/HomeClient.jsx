@@ -6,19 +6,19 @@ export default function HomeClient() {
   return (
     <div className="home__clients">
       <a href="#" className="home__clients__entry">
-        <img src={client1} alt="client" />
+        <img src={client1} alt="client" className="home__clients__entry__img" />
       </a>
       <a href="#" className="home__clients__entry">
-        <img src={client2} alt="client" />
+        <img src={client2} alt="client" className="home__clients__entry__img" />
       </a>
       <a href="#" className="home__clients__entry">
-        <img src={client1} alt="client" />
+        <img src={client1} alt="client" className="home__clients__entry__img" />
       </a>
       <a href="#" className="home__clients__entry">
-        <img src={client1} alt="client" />
+        <img src={client1} alt="client" className="home__clients__entry__img" />
       </a>
       <a href="#" className="home__clients__entry">
-        <img src={client2} alt="client" />
+        <img src={client2} alt="client" className="home__clients__entry__img" />
       </a>
     </div>
   );
