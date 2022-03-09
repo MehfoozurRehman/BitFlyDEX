@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import GovernanceProposals from "./screens/GovernanceProposals";
 import Home from "./screens/Home";
 import "./styles/export.scss";
 
@@ -11,6 +12,7 @@ export default function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/governance-proposals" element={<GovernanceProposals />} />
       </Routes>
       <Footer />
     </div>
