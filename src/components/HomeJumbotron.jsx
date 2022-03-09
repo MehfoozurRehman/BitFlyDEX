@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function HomeJumbotron() {
   return (
@@ -513,9 +514,12 @@ export default function HomeJumbotron() {
         </div>
 
         <div className="home__jumbotron__right__buttons">
-          <button className="home__jumbotron__right__buttons__button home__jumbotron__right__buttons__button__primary">
+          <Link
+            to="/decentralized-trading"
+            className="home__jumbotron__right__buttons__button home__jumbotron__right__buttons__button__primary"
+          >
             Enter app
-          </button>
+          </Link>
           <a
             href="#"
             className="home__jumbotron__right__buttons__button home__jumbotron__right__buttons__button__secondary"
