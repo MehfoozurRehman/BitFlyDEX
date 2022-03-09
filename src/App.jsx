@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import DecentralizedTrading from "./screens/DecentralizedTrading";
 import GovernanceProposals from "./screens/GovernanceProposals";
 import Home from "./screens/Home";
 import "./styles/export.scss";
@@ -13,6 +14,10 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/governance-proposals" element={<GovernanceProposals />} />
+        <Route
+          path="/decentralized-trading"
+          element={<DecentralizedTrading />}
+        />
       </Routes>
       <Footer />
     </div>

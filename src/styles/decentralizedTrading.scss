@@ -1,0 +1,207 @@
+@import "./global.scss";
+.decentralized__trading__main__container {
+  width: 100%;
+  max-width: 1440px;
+  height: fit-content;
+  min-height: 60vh;
+  margin-top: 4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 6em 2em;
+}
+.decentralized__trading__main__container__heading {
+  font-size: 30px;
+  color: $white;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 60%;
+}
+.decentralized__trading__main__container__para {
+  font-size: 16px;
+  color: $WhiteGray;
+  width: 40%;
+  margin-top: 1em;
+}
+.decentralized__trading__locked__value__card {
+  width: 100%;
+  padding: 3em;
+  height: fit-content;
+  background: $black100;
+  border-radius: 14px;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+}
+.decentralized__trading__locked__value__card__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.decentralized__trading__locked__value__card__header__left,
+.decentralized__trading__locked__value__card__header__center,
+.decentralized__trading__locked__value__card__header__right {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.decentralized__trading__locked__value__card__header__left__sub__heading {
+  font-size: 20px;
+  font-weight: 600;
+  color: $WhiteGray;
+}
+.decentralized__trading__locked__value__card__header__left__heading {
+  font-size: 30px;
+  color: $white;
+  font-weight: 600;
+  margin-top: 0.2em;
+}
+.decentralized__trading__locked__value__card__sub__card {
+  padding: 1.5em 2em;
+  width: 100%;
+  background: $black200;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 14px;
+}
+.decentralized__trading__locked__value__card__sub__card__left__heading {
+  font-size: 16px;
+  color: $WhiteGray;
+  font-weight: 600;
+}
+.decentralized__trading__locked__value__card__sub__card__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.decentralized__trading__locked__value__card__sub__card__left__price {
+  font-size: 14px;
+  color: $white;
+  margin-top: 0.5em;
+}
+.decentralized__trading__locked__value__card__sub__card__right__svg {
+  padding: 0.6em;
+  border-radius: 200px;
+  border: 1px solid $WhiteGray;
+}
+.decentralized__trading__locked__value__card__sub__card__right__svg svg {
+  width: 16px;
+  height: 16px;
+}
+.decentralized__trading__locked__value__card__sub__card__right__svg:hover {
+  background: $WhiteGray;
+  transition: 300ms ease-in-out;
+}
+.decentralized__trading__main__container__divider {
+  width: 90%;
+  height: 1px;
+  background: $WhiteGray;
+  margin: 3em 0em;
+}
+.decentralized__trading__main__container__footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.decentralized__trading__main__container__footer__col {
+  width: 20%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.decentralized__trading__main__container__footer__col__entry__para {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $WhiteGray;
+  font-size: 16px;
+  font-weight: 600;
+}
+.decentralized__trading__main__container__footer__col__entry__para__svg__wrapper {
+  position: relative;
+  cursor: pointer;
+  margin-left: 1em;
+}
+.decentralized__trading__main__container__footer__col__entry__para__svg__wrapper
+  svg {
+  width: 18px;
+  height: 18px;
+  margin-bottom: -0.3em;
+}
+.decentralized__trading__main__container__footer__col__entry__para__svg__wrapper__on__hover {
+  position: absolute;
+  top: 10;
+  left: 10;
+  width: 200px;
+  padding: 1em;
+  background: $black200;
+  border-radius: 18px;
+  display: none;
+}
+.decentralized__trading__main__container__footer__col__entry__para__svg__wrapper:hover
+  .decentralized__trading__main__container__footer__col__entry__para__svg__wrapper__on__hover {
+  display: flex;
+  transition: 300ms ease-in-out;
+}
+.decentralized__trading__main__container__footer__col__entry__heading {
+  font-size: 22px;
+  color: $white;
+  font-weight: 600;
+  margin-top: 0.2em;
+}
+.decentralized__trading__sub__cards__wrapper {
+  width: 100%;
+  max-width: 1440px;
+  height: fit-content;
+  padding: 2em;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.decentralized__trading__sub__cards__wrapper__right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 1200px) {
+  .decentralized__trading__main__container__footer__col {
+    width: 33%;
+    margin-bottom: 2em;
+  }
+  .decentralized__trading__main__container__footer {
+    justify-content: flex-start;
+  }
+  .decentralized__trading__main__container__heading,
+  .decentralized__trading__main__container__para {
+    width: 100%;
+  }
+}
+@media (max-width: 850px) {
+  .decentralized__trading__main__container__footer__col {
+    width: 50%;
+  }
+  .decentralized__trading__locked__value__card__header__left,
+  .decentralized__trading__locked__value__card__header__center,
+  .decentralized__trading__locked__value__card__header__right {
+    width: 100%;
+    margin-top: 1.5em;
+  }
+}
+@media (max-width: 550px) {
+  .decentralized__trading__main__container__footer__col {
+    width: 100%;
+  }
+}
