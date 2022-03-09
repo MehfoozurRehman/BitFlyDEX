@@ -62,7 +62,10 @@ export default function Header() {
   }, []);
 
   return (
-    <div className="header">
+    <div
+      className="header"
+      style={isNavOpen ? { backgroundColor: "black" } : null}
+    >
       <a href="#" className="header__logo">
         <img src={logo} alt="logo" className="header__logo__img" />
       </a>
