@@ -257,12 +257,80 @@
   text-transform: uppercase;
   margin: 0.4em 0em;
 }
+.tokenomics__container {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  margin: 0px auto;
+}
+.tokenomics__container__img {
+  width: 600px;
+}
+.tokenomics__container__heading {
+  font-size: 30px;
+  color: $white;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 2em;
+}
+.tokenomics__container__card {
+  width: 100%;
+  height: fit-content;
+  padding: 2em;
+  background: $black100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2em;
+  border-radius: 10px;
+}
+.tokenomics__container__card__center {
+  width: 65%;
+}
+.tokenomics__container__card__left__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7em 1.5em;
+  background: transparent;
+  border: 1px solid $white;
+  border-radius: 8px;
+  font-size: 14px;
+  color: $white;
+  width: 200px;
+  min-width: 200px;
+}
+.tokenomics__container__card__left__btn__img {
+  width: 36px;
+  margin-right: 1em;
+}
+.tokenomics__container__card__right {
+  color: $white;
+  font-weight: 600;
+  font-size: 18px;
+}
 @media (max-width: 1200px) {
   .home__jumbotron__right__heading {
     font-size: 30px;
   }
 }
 @media (max-width: 1000px) {
+  .tokenomics__container__card {
+    flex-direction: column;
+  }
+
+  .tokenomics__container__card__center {
+    width: 100%;
+    margin: 1.5em 0em;
+  }
+  .tokenomics__container__card__left,
+  .tokenomics__container__card__left__btn {
+    width: 100%;
+  }
   .ecosystem__container__content__card,
   .ecosystem__container__content__card__reverse {
     flex-direction: column;
@@ -300,7 +368,15 @@
     font-size: 12px;
   }
 }
+@media (max-width: 700px) {
+  .tokenomics__container__img {
+    width: 400px;
+  }
+}
 @media (max-width: 500px) {
+  .tokenomics__container__img {
+    width: 300px;
+  }
   .ecosystem__container__content__card__content__img {
     width: 200px;
   }
