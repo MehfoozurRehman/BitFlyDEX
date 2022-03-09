@@ -18,7 +18,7 @@ function FeaturesCard() {
         rewards and transaction fees. Staking indirectly serves to support the
         system.
       </div>
-      <button className="feature__container__content__card__btn">More</button>
+      <button className="btn__primary">More</button>
     </div>
   );
 }

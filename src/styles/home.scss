@@ -171,7 +171,8 @@
   font-size: 16px;
   margin: 0.6em 0em;
 }
-.feature__container__content__card__btn {
+
+.btn__primary {
   padding: 0.7em 3em;
   background: transparent;
   border: 1px solid $white;
@@ -181,10 +182,80 @@
   margin-top: 1em;
   cursor: pointer;
 }
-.feature__container__content__card__btn:hover {
+.btn__primary:hover {
   background: $white;
   color: $black;
   transition: 300ms ease-in-out;
+}
+.ecosystem__container {
+  width: 100%;
+  max-width: 1440px;
+  height: fit-content;
+  margin: 0px auto;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+}
+.ecosystem__container__heading {
+  font-size: 30px;
+  color: $white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.ecosystem__container__para {
+  font-size: 16px;
+  color: $white;
+  width: 80%;
+  margin: 0px auto;
+  color: $white;
+  margin: 0.7em 0em;
+  text-align: center;
+}
+.ecosystem__container__content__card__content__para {
+  font-size: 16px;
+  color: $white;
+
+  margin: 0px auto;
+  color: $white;
+}
+.ecosystem__container__content__card {
+  width: 100%;
+  height: fit-content;
+  padding: 2em 8em;
+  background: $black100;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+.ecosystem__container__content__card__reverse {
+  width: 100%;
+  height: fit-content;
+  padding: 2em 8em;
+  background: $black100;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+.ecosystem__container__content__card__content__img {
+  width: 300px;
+}
+.ecosystem__container__content__card__content {
+  width: 50%;
+}
+.ecosystem__container__content__card__content__heading {
+  font-size: 24px;
+  color: $white;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0.4em 0em;
 }
 @media (max-width: 1200px) {
   .home__jumbotron__right__heading {
@@ -192,6 +263,16 @@
   }
 }
 @media (max-width: 1000px) {
+  .ecosystem__container__content__card,
+  .ecosystem__container__content__card__reverse {
+    flex-direction: column;
+    padding: 2em;
+    text-align: center;
+  }
+  .ecosystem__container__content__card__content {
+    width: 100%;
+    margin-top: 2em;
+  }
   .feature__container__content__card {
     width: 47%;
   }
@@ -220,6 +301,9 @@
   }
 }
 @media (max-width: 500px) {
+  .ecosystem__container__content__card__content__img {
+    width: 200px;
+  }
   .feature__container__content__card {
     width: 100%;
   }
