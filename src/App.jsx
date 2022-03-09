@@ -7,12 +7,12 @@ import "./styles/export.scss";
 
 export default function App() {
   return (
-    <>
+    <div className="app">
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
       <Footer />
-    </>
+    </div>
   );
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Menu, X } from "react-feather";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
@@ -45,163 +45,189 @@ function NavLink({ title, to, list }) {
   );
 }
 export default function Header() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  useEffect(() => {
+    if (window.innerWidth <= 1200) {
+      setIsNavOpen(false);
+    } else {
+      setIsNavOpen(true);
+    }
+    window.addEventListener("resize", () => {
+      if (window.innerWidth <= 1200) {
+        setIsNavOpen(false);
+      } else {
+        setIsNavOpen(true);
+      }
+    });
+  }, []);
+
   return (
     <div className="header">
       <a href="#" className="header__logo">
         <img src={logo} alt="logo" className="header__logo__img" />
       </a>
-      <button className="header__menu">
-        <Menu size={20} color="currentColor" />
-        <X size={20} color="currentColor" />
+      <button
+        className="header__menu"
+        onClick={() => {
+          isNavOpen ? setIsNavOpen(false) : setIsNavOpen(true);
+        }}
+      >
+        {isNavOpen ? (
+          <X size={20} color="currentColor" />
+        ) : (
+          <Menu size={20} color="currentColor" />
+        )}
       </button>
-      <div className="header__nav">
-        <NavLink title="Home" to="/" />
-        <NavLink title="IDO" to="/" />
-        <NavLink
-          title="Earn"
-          to="/"
-          list={[
-            {
-              title: "LOREM IPSUM",
-              info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-              to: "/",
-            },
-            {
-              title: "LOREM IPSUM",
-              info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-              to: "/",
-            },
-            {
-              title: "LOREM IPSUM",
-              info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-              to: "/",
-            },
-            {
-              title: "LOREM IPSUM",
-              info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-              to: "/",
-            },
-            {
-              title: "LOREM IPSUM",
-              info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-              to: "/",
-            },
-          ]}
-        />
-        <NavLink
-          title="Trade"
-          to="/"
-          list={[
-            {
-              title: "LOREM IPSUM",
-              info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-              to: "/",
-            },
-            {
-              title: "LOREM IPSUM",
-              info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-              to: "/",
-            },
-            {
-              title: "LOREM IPSUM",
-              info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-              to: "/",
-            },
-            {
-              title: "LOREM IPSUM",
-              info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-              to: "/",
-            },
-            {
-              title: "LOREM IPSUM",
-              info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-              to: "/",
-            },
-          ]}
-        />
-        <NavLink
-          title="NFT's"
-          to="/"
-          list={[
-            {
-              title: "LOREM IPSUM",
-              info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-              to: "/",
-            },
-            {
-              title: "LOREM IPSUM",
-              info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-              to: "/",
-            },
-            {
-              title: "LOREM IPSUM",
-              info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-              to: "/",
-            },
-            {
-              title: "LOREM IPSUM",
-              info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-              to: "/",
-            },
-            {
-              title: "LOREM IPSUM",
-              info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-              to: "/",
-            },
-          ]}
-        />
-        <NavLink
-          title="Win"
-          to="/"
-          list={[
-            {
-              title: "LOREM IPSUM",
-              info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-              to: "/",
-            },
-            {
-              title: "LOREM IPSUM",
-              info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-              to: "/",
-            },
-            {
-              title: "LOREM IPSUM",
-              info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-              to: "/",
-            },
-            {
-              title: "LOREM IPSUM",
-              info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-              to: "/",
-            },
-            {
-              title: "LOREM IPSUM",
-              info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-              to: "/",
-            },
-          ]}
-        />
-        <button className="header__link__button header__link__button__primary">
-          $2.0454
-        </button>
-        <button className="header__link__button header__link__button__secondary">
-          Connect Wallet
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="14"
-            height="14"
-            viewBox="0 0 24 24"
-          >
-            <path
-              id="Icon_material-arrow-upward"
-              data-name="Icon material-arrow-upward"
-              d="M6,18l2.115,2.115,8.385-8.37V30h3V11.745l8.37,8.385L30,18,18,6Z"
-              transform="translate(30 -6) rotate(90)"
-              fill="currentColor"
-            />
-          </svg>
-        </button>
-      </div>
+      {isNavOpen ? (
+        <div className="header__nav">
+          <NavLink title="Home" to="/" />
+          <NavLink title="IDO" to="/" />
+          <NavLink
+            title="Earn"
+            to="/"
+            list={[
+              {
+                title: "LOREM IPSUM",
+                info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
+                to: "/",
+              },
+              {
+                title: "LOREM IPSUM",
+                info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
+                to: "/",
+              },
+              {
+                title: "LOREM IPSUM",
+                info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
+                to: "/",
+              },
+              {
+                title: "LOREM IPSUM",
+                info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
+                to: "/",
+              },
+              {
+                title: "LOREM IPSUM",
+                info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
+                to: "/",
+              },
+            ]}
+          />
+          <NavLink
+            title="Trade"
+            to="/"
+            list={[
+              {
+                title: "LOREM IPSUM",
+                info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
+                to: "/",
+              },
+              {
+                title: "LOREM IPSUM",
+                info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
+                to: "/",
+              },
+              {
+                title: "LOREM IPSUM",
+                info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
+                to: "/",
+              },
+              {
+                title: "LOREM IPSUM",
+                info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
+                to: "/",
+              },
+              {
+                title: "LOREM IPSUM",
+                info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
+                to: "/",
+              },
+            ]}
+          />
+          <NavLink
+            title="NFT's"
+            to="/"
+            list={[
+              {
+                title: "LOREM IPSUM",
+                info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
+                to: "/",
+              },
+              {
+                title: "LOREM IPSUM",
+                info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
+                to: "/",
+              },
+              {
+                title: "LOREM IPSUM",
+                info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
+                to: "/",
+              },
+              {
+                title: "LOREM IPSUM",
+                info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
+                to: "/",
+              },
+              {
+                title: "LOREM IPSUM",
+                info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
+                to: "/",
+              },
+            ]}
+          />
+          <NavLink
+            title="Win"
+            to="/"
+            list={[
+              {
+                title: "LOREM IPSUM",
+                info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
+                to: "/",
+              },
+              {
+                title: "LOREM IPSUM",
+                info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
+                to: "/",
+              },
+              {
+                title: "LOREM IPSUM",
+                info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
+                to: "/",
+              },
+              {
+                title: "LOREM IPSUM",
+                info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
+                to: "/",
+              },
+              {
+                title: "LOREM IPSUM",
+                info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
+                to: "/",
+              },
+            ]}
+          />
+          <button className="header__link__button header__link__button__primary">
+            $2.0454
+          </button>
+          <button className="header__link__button header__link__button__secondary">
+            Connect Wallet
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+            >
+              <path
+                id="Icon_material-arrow-upward"
+                data-name="Icon material-arrow-upward"
+                d="M6,18l2.115,2.115,8.385-8.37V30h3V11.745l8.37,8.385L30,18,18,6Z"
+                transform="translate(30 -6) rotate(90)"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+        </div>
+      ) : null}
     </div>
   );
 }
