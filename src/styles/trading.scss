@@ -1,0 +1,49 @@
+@import "./global.scss";
+.trading__main__container {
+  width: 100%;
+  max-width: 1440px;
+  height: fit-content;
+  min-height: 100vh;
+  padding: 2em;
+  margin: 8em 0em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.trading__main__container__content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.trading__main__container__content__btc__usd__card {
+  width: 70%;
+  padding: 2em;
+  background: $black100;
+  color: $white;
+  border-radius: 14px;
+}
+.trading__main__container__content__btc__usd__card__entry__container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5em 0em;
+}
+.trading__main__container__content__btc__usd__card__entry__wrapper {
+  width: 20%;
+}
+.trading__main__container__content__btc__usd__card__heading {
+  font-size: 24px;
+  font-weight: 600;
+  color: $white;
+}
+.trading__main__container__content__btc__usd__card__entry__wrapper {
+  font-size: 14px;
+  color: $white;
+}
+.trading__main__container__content__graph {
+  width: 100%;
+  margin-top: 1em;
+}

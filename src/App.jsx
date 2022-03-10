@@ -6,6 +6,7 @@ import ConnectWallet from "./screens/ConnectWallet";
 import DecentralizedTrading from "./screens/DecentralizedTrading";
 import GovernanceProposals from "./screens/GovernanceProposals";
 import Home from "./screens/Home";
+import Trading from "./screens/Trading";
 import "./styles/export.scss";
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
           element={<DecentralizedTrading />}
         />
         <Route path="/connect-wallet" element={<ConnectWallet />} />
+        <Route path="/trading" element={<Trading />} />
       </Routes>
       <Footer />
     </div>

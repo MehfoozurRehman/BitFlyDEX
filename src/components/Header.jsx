@@ -118,7 +118,7 @@ export default function Header() {
           />
           <NavLink
             title="Trade"
-            to="/"
+            to="/trading"
             list={[
               {
                 title: "LOREM IPSUM",
