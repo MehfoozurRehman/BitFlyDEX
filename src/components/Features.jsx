@@ -9,6 +9,11 @@ function FeaturesCard() {
         alt="featureSvg"
         className="feature__container__content__card__img"
       />
+      <img
+        src={featureSvg}
+        alt="featureSvg"
+        className="feature__container__content__card__img__hover"
+      />
       <div className="feature__container__content__card__heading">INVEST</div>
       <div className="feature__container__content__card__sub__heading">
         Let your Crypto work hard for you!

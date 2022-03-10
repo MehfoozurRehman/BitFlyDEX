@@ -1,4 +1,7 @@
 import React from "react";
+import POISSvg from "../assets/POISSvg.png";
+import busdCardPic from "../assets/busdCardPic.png";
+import WhyUs from "../components/WhyUs";
 
 function POSICard() {
   return (
@@ -119,16 +122,76 @@ function POSICardEntry({ title, price }) {
 
 function StackTokenCard() {
   return (
-    <div className="decentralized__trading__sub__cards__wrapper__left__card">
-      Hello
+    <div className="decentralized__trading__sub__cards__wrapper__left__card__stack">
+      <div className="decentralized__trading__sub__cards__wrapper__left__card__stack__heading">
+        Stake your POSI in pools for even more tokens
+      </div>
+      <div className="decentralized__trading__sub__cards__wrapper__left__card__stack__para">
+        Pools - An Easy Way to Earn Crypto
+      </div>
+      <button className="decentralized__trading__sub__cards__wrapper__left__card__stack__btn">
+        Start Earning POSI
+      </button>
+
+      <div className="decentralized__trading__sub__cards__wrapper__left__card__stack__sub__card">
+        <img
+          src={POISSvg}
+          alt="POISSvg"
+          className="decentralized__trading__sub__cards__wrapper__left__card__stack__sub__card__img"
+        />
+        <div className="decentralized__trading__sub__cards__wrapper__left__card__stack__sub__card__content">
+          <div className="decentralized__trading__sub__cards__wrapper__left__card__stack__sub__card__content__heading">
+            Cast and Stake NFT Cards with the highest APY
+          </div>
+          <div className="decentralized__trading__sub__cards__wrapper__left__card__stack__sub__card__content__para">
+            182.591% APY
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
 
 function NFTCard() {
   return (
-    <div className="decentralized__trading__sub__cards__wrapper__left__card">
-      Hello2
+    <div className="decentralized__trading__sub__cards__wrapper__left__card__nft">
+      <div className="decentralized__trading__sub__cards__wrapper__left__card__nft__heading">
+        Cast and Stake NFT Cards with the highest APY
+      </div>
+      <div className="decentralized__trading__sub__cards__wrapper__left__card__nft__para">
+        182.591% APY
+      </div>
+      <button className="decentralized__trading__sub__cards__wrapper__left__card__nft__btn">
+        Start Casting
+      </button>
+    </div>
+  );
+}
+
+function BUSDCard() {
+  return (
+    <div className="decentralized__trading__sub__cards__wrapper__right__bottom__card__wrapper__card">
+      <div className="decentralized__trading__sub__cards__wrapper__right__bottom__card__wrapper__card__left">
+        <img
+          src={busdCardPic}
+          alt="busdCardPic"
+          className="decentralized__trading__sub__cards__wrapper__right__bottom__card__wrapper__card__img"
+        />
+        <div className="decentralized__trading__sub__cards__wrapper__right__bottom__card__wrapper__card__left__content">
+          <div className="decentralized__trading__sub__cards__wrapper__right__bottom__card__wrapper__card__left__content__heading">
+            POSI-BUSD
+          </div>
+          <div className="decentralized__trading__sub__cards__wrapper__right__bottom__card__wrapper__card__left__content__sub__heading">
+            Liquidity : 13,310,965.81 BUSD
+          </div>
+          <div className="decentralized__trading__sub__cards__wrapper__right__bottom__card__wrapper__card__left__content__para">
+            APR : 206.005%
+          </div>
+        </div>
+      </div>
+      <button className="decentralized__trading__sub__cards__wrapper__right__bottom__card__wrapper__card__btn">
+        Forms
+      </button>
     </div>
   );
 }
@@ -179,10 +242,22 @@ export default function DecentralizedTrading() {
           <StackTokenCard />
         </div>
         <div className="decentralized__trading__sub__cards__wrapper__right">
-          <NFTCard />
-          <NFTCard />
+          <div className="decentralized__trading__sub__cards__wrapper__right__top">
+            <NFTCard />
+            <NFTCard />
+          </div>
+          <div className="decentralized__trading__sub__cards__wrapper__right__bottom">
+            <div className="decentralized__trading__sub__cards__wrapper__right__bottom__heading">
+              Top Farms
+            </div>
+            <div className="decentralized__trading__sub__cards__wrapper__right__bottom__card__wrapper">
+              <BUSDCard />
+              <BUSDCard />
+            </div>
+          </div>
         </div>
       </div>
+      <WhyUs />
     </>
   );
 }

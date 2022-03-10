@@ -166,15 +166,197 @@
   max-width: 1440px;
   height: fit-content;
   padding: 2em;
-  background: #ffffff;
+  flex-wrap: wrap;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 .decentralized__trading__sub__cards__wrapper__right {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 64%;
+}
+.decentralized__trading__sub__cards__wrapper__left {
+  width: 30%;
+}
+.decentralized__trading__sub__cards__wrapper__left__card__stack {
+  width: 100%;
+  padding: 3em 2em;
+  background: $black100;
+  border-radius: 14px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+}
+.decentralized__trading__sub__cards__wrapper__left__card__nft {
+  width: 46%;
+  background: $black100;
+  height: fit-content;
+  padding: 2em;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.decentralized__trading__sub__cards__wrapper__left__card__nft__btn {
+  background: $WhiteGray;
+  padding: 1em 2em;
+  color: $white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 0.5em;
+}
+.decentralized__trading__sub__cards__wrapper__left__card__nft__btn:hover {
+  background: $black200;
+  transition: 300ms ease-in-out;
+}
+.decentralized__trading__sub__cards__wrapper__left__card__stack__heading {
+  font-size: 26px;
+  color: $white;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+}
+.decentralized__trading__sub__cards__wrapper__left__card__stack__para {
+  font-size: 16px;
+  color: $WhiteGray;
+  margin: 0.7em 0em;
+}
+.decentralized__trading__sub__cards__wrapper__left__card__nft__heading {
+  font-size: 22px;
+  color: $white;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+}
+.decentralized__trading__sub__cards__wrapper__left__card__nft__para {
+  font-size: 16px;
+  color: $WhiteGray;
+  margin: 0.7em 0em;
+  text-align: center;
+}
+.decentralized__trading__sub__cards__wrapper__left__card__stack__btn {
+  background: transparent;
+  border: 1px solid $white;
+  border-radius: 6px;
+  padding: 1em;
+  color: $white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 1em;
+}
+.decentralized__trading__sub__cards__wrapper__left__card__stack__btn:hover {
+  background-color: $white;
+  color: $black;
+  transition: 300ms ease-in-out;
+}
+.decentralized__trading__sub__cards__wrapper__left__card__stack__sub__card {
+  padding: 1em;
+  background: $black200;
+  border-radius: 1em;
+  display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 2em;
+}
+.decentralized__trading__sub__cards__wrapper__left__card__stack__sub__card__img {
+  width: 80px;
+}
+.decentralized__trading__sub__cards__wrapper__left__card__stack__sub__card__content {
+  width: 65%;
+}
+.decentralized__trading__sub__cards__wrapper__left__card__stack__sub__card__content__heading {
+  font-size: 16px;
+  color: $WhiteGray;
+}
+.decentralized__trading__sub__cards__wrapper__left__card__stack__sub__card__content__para {
+  font-size: 18px;
+  color: $white;
+  font-weight: 600;
+  margin-top: 0.2em;
+}
+.decentralized__trading__sub__cards__wrapper__right__top {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.decentralized__trading__sub__cards__wrapper__right__bottom {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.decentralized__trading__sub__cards__wrapper__right__bottom__card__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.decentralized__trading__sub__cards__wrapper__right__bottom__heading {
+  width: 100%;
+  font-size: 24px;
+  color: $white;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 1em 0em;
+  margin-top: 1.6em;
+}
+.decentralized__trading__sub__cards__wrapper__right__bottom__card__wrapper__card {
+  width: 46%;
+  background: $black100;
+  height: fit-content;
+  padding: 1.5em 1em;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $white;
+}
+.decentralized__trading__sub__cards__wrapper__right__bottom__card__wrapper__card__btn {
+  background: transparent;
+  border: 1px solid $white;
+  border-radius: 6px;
+  padding: 0.7em 1em;
+  color: $white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 1em;
+}
+.decentralized__trading__sub__cards__wrapper__right__bottom__card__wrapper__card__btn:hover {
+  background-color: $white;
+  color: $black;
+  transition: 300ms ease-in-out;
+}
+.decentralized__trading__sub__cards__wrapper__right__bottom__card__wrapper__card__left {
+  display: flex;
+  align-items: center;
+}
+.decentralized__trading__sub__cards__wrapper__right__bottom__card__wrapper__card__img {
+  width: 69px;
+  margin-right: 0.5em;
+}
+.decentralized__trading__sub__cards__wrapper__right__bottom__card__wrapper__card__left__content__heading {
+  font-size: 16px;
+  color: $white;
+  font-weight: 600;
+}
+.decentralized__trading__sub__cards__wrapper__right__bottom__card__wrapper__card__left__content__sub__heading {
+  font-size: 14px;
+  color: $WhiteGray;
+  margin: 0.3em 0em;
+}
+.decentralized__trading__sub__cards__wrapper__right__bottom__card__wrapper__card__left__content__para {
+  font-size: 14px;
+  color: $white;
 }
 @media (max-width: 1200px) {
   .decentralized__trading__main__container__footer__col {
@@ -188,8 +370,22 @@
   .decentralized__trading__main__container__para {
     width: 100%;
   }
+  .decentralized__trading__sub__cards__wrapper__left {
+    width: 100%;
+    margin-bottom: 3em;
+  }
+  .decentralized__trading__sub__cards__wrapper__right {
+    width: 100%;
+  }
 }
+// @media (max-width: 1000px) {
+
+// }
 @media (max-width: 850px) {
+  .decentralized__trading__sub__cards__wrapper__right__bottom__card__wrapper__card {
+    width: 100%;
+    margin-bottom: 3em;
+  }
   .decentralized__trading__main__container__footer__col {
     width: 50%;
   }
@@ -203,5 +399,9 @@
 @media (max-width: 550px) {
   .decentralized__trading__main__container__footer__col {
     width: 100%;
+  }
+  .decentralized__trading__sub__cards__wrapper__left__card__nft {
+    width: 100%;
+    margin-bottom: 2em;
   }
 }

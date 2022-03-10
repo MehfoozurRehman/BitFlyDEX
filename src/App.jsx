@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import ConnectWallet from "./screens/ConnectWallet";
 import DecentralizedTrading from "./screens/DecentralizedTrading";
 import GovernanceProposals from "./screens/GovernanceProposals";
 import Home from "./screens/Home";
@@ -18,6 +19,7 @@ export default function App() {
           path="/decentralized-trading"
           element={<DecentralizedTrading />}
         />
+        <Route path="/connect-wallet" element={<ConnectWallet />} />
       </Routes>
       <Footer />
     </div>

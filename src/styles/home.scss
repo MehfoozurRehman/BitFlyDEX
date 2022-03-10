@@ -148,8 +148,30 @@
   cursor: pointer;
   margin-bottom: 4em;
 }
+.feature__container__content__card:hover * {
+  color: $black !important;
+  transition: 300ms ease-in-out;
+}
+.feature__container__content__card:hover {
+  background: $white;
+}
+.feature__container__content__card:hover .btn__primary {
+  border-color: $black;
+}
+.feature__container__content__card:hover
+  .feature__container__content__card__img__hover {
+  display: flex;
+}
+.feature__container__content__card:hover
+  .feature__container__content__card__img {
+  display: none;
+}
 .feature__container__content__card__img {
   width: 80px;
+}
+.feature__container__content__card__img__hover {
+  width: 80px;
+  display: none;
 }
 .feature__container__content__card__heading {
   font-size: 20px;
@@ -231,6 +253,13 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 2em;
+  border: 1px solid $black100;
+  cursor: pointer;
+}
+.ecosystem__container__content__card:hover,
+.ecosystem__container__content__card__reverse:hover {
+  border: 1px solid $white;
+  transition: 400ms ease-in-out;
 }
 .ecosystem__container__content__card__reverse {
   width: 100%;
@@ -287,6 +316,11 @@
   align-items: center;
   margin-top: 2em;
   border-radius: 10px;
+  cursor: pointer;
+}
+.tokenomics__container__card:hover {
+  background: $black200;
+  transition: 300ms ease-in-out;
 }
 .tokenomics__container__card__center {
   width: 65%;

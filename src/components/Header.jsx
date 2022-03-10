@@ -66,9 +66,9 @@ export default function Header() {
       className="header"
       style={isNavOpen ? { backgroundColor: "black" } : null}
     >
-      <a href="#" className="header__logo">
+      <Link to="/" className="header__logo">
         <img src={logo} alt="logo" className="header__logo__img" />
-      </a>
+      </Link>
       <button
         className="header__menu"
         onClick={() => {
@@ -209,10 +209,16 @@ export default function Header() {
               },
             ]}
           />
-          <button className="header__link__button header__link__button__primary">
+          <Link
+            to="/"
+            className="header__link__button header__link__button__primary"
+          >
             $2.0454
-          </button>
-          <button className="header__link__button header__link__button__secondary">
+          </Link>
+          <Link
+            to="/connect-wallet"
+            className="header__link__button header__link__button__secondary"
+          >
             Connect Wallet
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -228,7 +234,7 @@ export default function Header() {
                 fill="currentColor"
               />
             </svg>
-          </button>
+          </Link>
         </div>
       ) : null}
     </div>
