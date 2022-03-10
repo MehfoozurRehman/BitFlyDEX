@@ -1,5 +1,6 @@
 import React from "react";
 import featureSvg from "../assets/featureSvg.png";
+import featureSvgHover from "../assets/featureSvgHover.png";
 
 function FeaturesCard() {
   return (
@@ -10,8 +11,8 @@ function FeaturesCard() {
         className="feature__container__content__card__img"
       />
       <img
-        src={featureSvg}
-        alt="featureSvg"
+        src={featureSvgHover}
+        alt="featureSvgHover"
         className="feature__container__content__card__img__hover"
       />
       <div className="feature__container__content__card__heading">INVEST</div>
