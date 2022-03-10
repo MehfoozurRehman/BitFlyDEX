@@ -46,7 +46,7 @@
 }
 .proposal__list {
   margin-top: 2rem;
-  height: 100vh;
+  height: fit-content;
   width: 100%;
 }
 .proposal__list__wrapper {
@@ -127,5 +127,15 @@
   }
   .proposal__list__wrapper__item__right__1 svg {
     margin-right: 1rem;
+  }
+}
+@media (max-width: 550px) {
+  .proposal__list__wrapper__item__left__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .proposal__list__wrapper__item__left__bottom__2 {
+    margin: 0.5rem 0;
+    flex: 2;
   }
 }
