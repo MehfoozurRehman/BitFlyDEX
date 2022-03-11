@@ -2,7 +2,7 @@
 .vaults__main__container {
   width: 100%;
   max-width: 1440px;
-  margin: 8em 0em;
+  margin-top: 8em;
   padding: 2em;
   height: fit-content;
 }
@@ -134,7 +134,7 @@
   margin: 0em 0.5em;
 }
 .vaults__main__container__content__card__suub__card__content {
-  width: 60%;
+  width: 70%;
 }
 
 .vaults__main__container__content__card__suub__card__content__heading {
@@ -203,7 +203,178 @@
   font-size: 14px;
   color: $WhiteGray;
 }
+.stack__calculation__container {
+  width: 100%;
+  max-width: 1440px;
+  color: $white;
+  padding: 2em;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.stack__calculation__container__heading {
+  font-size: 36px;
+  font-weight: 600;
+  color: $white;
+  text-transform: uppercase;
+  text-align: center;
+}
+.stack__calculation__container__para {
+  font-size: 16px;
+  color: $WhiteGray;
+  text-align: center;
+  margin-top: 0.2em;
+}
+.stack__calculation__container__card {
+  width: 70%;
+  background: $black100;
+  padding: 2em;
+  height: fit-content;
+  margin: 2em 0em;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.stack__calculation__container__card__heading {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: $white;
+}
+.stack__calculation__container__card__heading__bottom {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: $white;
+  margin-top: 2em;
+}
+.stack__calculation__container__card__input__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 01em;
+  background: transparent;
+  border: 1px solid rgb(132, 132, 132, 0.2);
+  border-radius: 8px;
+  color: $white;
+  margin-top: 1.5em;
+  cursor: pointer;
+  position: relative;
+}
+.stack__calculation__container__card__input__wrapper__left {
+  padding: 0px;
+  border: none;
+  outline: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  color: $white;
+}
+.stack__calculation__container__card__input__wrapper__left__entry {
+  padding: 0.7em;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  color: $white;
+  width: 100%;
+  cursor: pointer;
+}
+.stack__calculation__container__card__input__wrapper__left__entry:hover {
+  background: $WhiteGray;
+  transition: 400ms ease-in-out;
+}
+.stack__calculation__container__card__input__wrapper__left__entry svg {
+  width: 22px;
+  height: 22px;
+  margin-right: 1em;
+}
+.stack__calculation__container__card__input__wrapper__left svg {
+  width: 22px;
+  height: 22px;
+  margin-right: 1em;
+}
+.stack__calculation__container__card__entry__wrapper {
+  width: 100%;
+  height: fit-content;
+  padding: 1em;
+  border-radius: 14px;
+  background: $black200;
+  animation: Animate 500ms linear;
+}
+@keyframes Animate {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.stack__calculation__container__card__input__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.stack__calculation__container__card__input__container {
+  width: 100%;
+  margin-top: 2em;
+}
+.stack__calculation__container__card__input__container__wrapper {
+  width: 96%;
+  background: $black200;
+  border-radius: 6px;
+}
+.stack__calculation__container__card__input {
+  padding: 1em;
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: $white;
+}
+.stack__calculation__container__card__input__container__heading {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0.6em 0em;
+}
+.stack__calculation__container__card__input__container__row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.stack__calculation__container__card__heading__btn {
+  width: 100%;
+
+  padding: 0.9em;
+  border: 1px solid rgb(132, 132, 132, 0.2);
+  background: transparent;
+  outline: none;
+  color: $white;
+  border-radius: 8px;
+  margin-top: 2em;
+}
+.stack__calculation__container__card__buttom__para {
+  font-size: 16px;
+  color: $WhiteGray;
+  width: 70%;
+  text-align: center;
+  margin-top: 2em;
+}
 @media (max-width: 1100px) {
+  .stack__calculation__container__card {
+    width: 85%;
+  }
   .vaults__main__container__content__card {
     width: 48%;
     margin-bottom: 2em;
@@ -223,7 +394,20 @@
   }
 }
 @media (max-width: 750px) {
+  .stack__calculation__container__card {
+    width: 100%;
+  }
   .vaults__main__container__content__card {
     width: 100%;
+  }
+  .stack__calculation__container__card__input__container__row {
+    flex-direction: column;
+  }
+  .stack__calculation__container__card__input__container__wrapper,
+  .stack__calculation__container__card__buttom__para {
+    width: 100%;
+  }
+  .vaults__main__container__card {
+    padding: 2em;
   }
 }

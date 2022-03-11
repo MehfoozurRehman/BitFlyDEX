@@ -145,7 +145,7 @@ export default function ConnectWallet() {
             setSelected={setSelected}
           />
         </div>
-        <div className="connect__main__container__content__divider"></div>
+        <form className="connect__main__container__content__divider"></form>
         {selected === "SWAP" ? (
           <>
             <div className="connect__main__container__content__header">
