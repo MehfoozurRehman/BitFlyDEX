@@ -4,6 +4,7 @@ import StakingCalculation from "../components/StakingCalculation";
 import VaultBUSD from "../components/VaultBUSD";
 import Switch from "@mui/material/Switch";
 import WhyUs from "../components/WhyUs";
+import FAQ from "../components/FAQ";
 
 const label = { inputProps: { "aria-label": "Switch demo" } };
 
@@ -55,6 +56,24 @@ export default function Farming() {
       </div>
       <WhyUs />
       <StakingCalculation />
+      <div className="faq__container">
+        <div
+          style={{ marginBottom: "1.5em" }}
+          className="why__us__container__heading"
+        >
+          FAQ
+        </div>
+        <FAQ />
+        <FAQ />
+        <FAQ />
+        <FAQ />
+        <FAQ />
+        <FAQ />
+        <FAQ />
+        <FAQ />
+        <FAQ />
+        <FAQ />
+      </div>
     </>
   );
 }

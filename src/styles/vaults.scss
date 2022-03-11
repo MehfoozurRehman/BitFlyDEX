@@ -409,6 +409,49 @@
   color: $white;
   transition: 300ms ease-in-out;
 }
+.faq__section__content__card {
+  width: 100%;
+  padding: 1.5em 2em;
+  background: $black100;
+  border-radius: 12px;
+  margin-bottom: 1em;
+  height: fit-content;
+  border: none;
+  outline: none;
+
+  cursor: pointer;
+}
+.faq__section__content__card svg {
+  color: $white !important;
+}
+.faq__section__content__card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq__section__content__card__heading {
+  font-size: 16px;
+  font-weight: 600;
+  color: $white;
+  width: 100%;
+  text-align: start;
+}
+.faq__section__content__card__paragraph {
+  font-size: 15px;
+  color: $white;
+  margin: 1.5em 0em;
+  width: 100%;
+  text-align: start;
+}
+.faq__container {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
 @media (max-width: 1100px) {
   .stack__calculation__container__card {
     width: 85%;
