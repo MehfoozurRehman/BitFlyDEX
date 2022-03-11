@@ -520,12 +520,12 @@ export default function HomeJumbotron() {
           >
             Enter app
           </Link>
-          <a
-            href="#"
+          <Link
+            to="/vaults"
             className="home__jumbotron__right__buttons__button home__jumbotron__right__buttons__button__secondary"
           >
             Buy POSI
-          </a>
+          </Link>
         </div>
       </div>
     </div>

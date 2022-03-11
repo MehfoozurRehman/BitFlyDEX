@@ -8,6 +8,7 @@ import GovernanceProposals from "./screens/GovernanceProposals";
 import Home from "./screens/Home";
 import PoolAndTrade from "./screens/PoolAndTrade";
 import Trading from "./screens/Trading";
+import Vaults from "./screens/Vaults";
 import "./styles/export.scss";
 
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/connect-wallet" element={<ConnectWallet />} />
         <Route path="/trading" element={<Trading />} />
         <Route path="/pool-trade" element={<PoolAndTrade />} />
+        <Route path="/vaults" element={<Vaults />} />
       </Routes>
       <Footer />
     </div>
