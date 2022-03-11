@@ -32,6 +32,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 0.5em 0em;
 }
 .trading__main__container__content__btc__usd__card__entry__wrapper {
@@ -124,6 +125,7 @@
 .trading__main__container__content__btc__usd__card__header {
   display: flex;
   width: 60%;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -179,4 +181,30 @@
   background: $black100;
   border-radius: 14px;
   margin-bottom: 2em;
+}
+@media (max-width: 1100px) {
+  .trading__main__container__content__btc__usd__card {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  .trading__main__container__content__right {
+    width: 100%;
+  }
+}
+@media (max-width: 850px) {
+  .trading__main__container__content__btc__usd__card__entry__wrapper {
+    width: 40%;
+    margin-bottom: 2em;
+  }
+  .trading__main__container__content__right__card__col__entry,
+  .trading__main__container__content__right__card__header__entry {
+    font-size: 12px;
+  }
+  .trading__main__container__content__btc__usd__card__header {
+    width: 100%;
+  }
+  .trading__main__container__content__btc__usd__card__nav {
+    width: 100%;
+    margin-top: 1em;
+  }
 }
