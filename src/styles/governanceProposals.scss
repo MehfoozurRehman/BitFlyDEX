@@ -142,6 +142,19 @@
   }
   .proposal__list__wrapper__item__left__bottom__2 {
     margin: 0.5rem 0;
-    flex: 2;
+    // flex: 2;
   }
+}
+.pagination__container {
+  background-color: $black200;
+  padding: 0.5em;
+  border-radius: 10px;
+}
+.Mui-selected {
+  background-color: #fff !important;
+}
+.MuiPagination-ul {
+}
+.MuiTouchRipple-root {
+  color: white !important;
 }

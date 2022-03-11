@@ -1,3 +1,4 @@
+import { Pagination } from "@material-ui/lab";
 import React from "react";
 
 function GovernanceProposals() {
@@ -34,6 +35,9 @@ function GovernanceProposals() {
             <ProposalItem />
             <ProposalItem />
             <ProposalItem />
+            <div className="pagination__container">
+              <Pagination count={5} color="standard" />
+            </div>
           </div>
         </div>
       </div>
