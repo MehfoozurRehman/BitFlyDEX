@@ -36,7 +36,7 @@
   margin: 0.5em 0em;
 }
 .trading__main__container__content__btc__usd__card__entry__wrapper {
-  width: 20%;
+  width: 16%;
 }
 .trading__main__container__content__btc__usd__card__heading {
   font-size: 24px;
@@ -65,6 +65,14 @@
   background: $black100;
   border-radius: 14px;
   padding: 2em 0em;
+  margin-bottom: 2em;
+}
+.trading__main__container__content__right__card__main__pool {
+  color: $white;
+  width: 100%;
+  background: $black100;
+  border-radius: 14px;
+  padding: 1em;
   margin-bottom: 2em;
 }
 .trading__main__container__content__right__card__heading {
@@ -181,6 +189,204 @@
   background: $black100;
   border-radius: 14px;
   margin-bottom: 2em;
+}
+.trading__main__container__content__right__card__pool__heading {
+  font-size: 20px;
+  color: $white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.trading__main__container__content__right__card__pool__img {
+  width: 45px;
+  margin-right: 0.5em;
+}
+.trading__main__container__content__right__card__pool__heading {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: $white;
+}
+.trading__main__container__content__right__card__pool__sub__heading {
+  font-size: 14px;
+  color: $WhiteGray;
+  margin: 0.2em 0em;
+}
+.trading__main__container__content__right__card__pool__para {
+  font-size: 14px;
+  color: $white;
+}
+.trading__main__container__content__right__card__pool__btn {
+  background: none;
+  border: 1px solid $white;
+  border-radius: 6px;
+  font-size: 12px;
+  color: $white;
+  padding: 0.7em;
+  cursor: pointer;
+}
+.trading__main__container__content__right__card__pool__btn:hover {
+  background: $white;
+  transition: 300ms ease-in-out;
+  color: $black;
+}
+.trading__main__container__buy__and__sell__card__btn {
+  background: none;
+  border: 1px solid $white;
+  border-radius: 6px;
+  font-size: 12px;
+  color: $white;
+  margin: 1em 0em;
+  padding: 1em 2em;
+  cursor: pointer;
+}
+.trading__main__container__buy__and__sell__card__btn:hover {
+  background: $white;
+  transition: 300ms ease-in-out;
+  color: $black;
+}
+.trading__main__container__buy__and__sell__card {
+  color: $white;
+  width: 100%;
+  height: fit-content;
+  padding: 1em;
+  background: $black100;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.trading__main__container__buy__and__sell__card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.trading__main__container__buy__and__sell__card__header__entry {
+  width: 50%;
+  position: relative;
+}
+.trading__main__container__buy__and__sell__card__header__entry__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.trading__main__container__buy__and__sell__card__header__entry__heading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  border-radius: 6px;
+  background: transparent;
+  border: none;
+  color: $white;
+  outline: none;
+  cursor: pointer;
+}
+.trading__main__container__buy__and__sell__card__header__entry__heading:hover {
+  background: $black200;
+  transition: 300ms ease-in-out;
+}
+.trading__main__container__buy__and__sell__card__header__entry__input__selected {
+  background: $black200;
+}
+.trading__main__container__buy__and__sell__card__heading__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1em;
+  width: 100%;
+}
+.trading__main__container__buy__and__sell__card__heading__wrapper__entry {
+  font-size: 14px;
+  color: $white;
+}
+.trading__main__container__buy__and__sell__card__input__wrapper {
+  width: 100%;
+  background: $black200;
+  border-radius: 6px;
+  margin-top: 1em;
+}
+.trading__main__container__buy__and__sell__card__input {
+  padding: 0.8em;
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: $white;
+}
+.trading__main__container__buy__and__sell__card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5em 0em;
+  width: 100%;
+}
+.trading__main__container__buy__and__sell__card__footer__entry {
+  font-size: 14px;
+  color: $white;
+}
+.trading__main__container__content__btc__usd__card__content__heading {
+  font-size: 20px;
+  color: $white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.trading__main__container__content__btc__usd__card__headings__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-top: 1em;
+}
+.trading__main__container__content__btc__usd__card__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-top: 1em;
+}
+.trading__main__container__content__btc__usd__card__row__entry {
+  font-size: 14px;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  width: 16%;
+}
+.trading__main__container__content__btc__usd__card__headings__row__entry {
+  font-size: 14px;
+  color: $white;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  width: 16%;
+}
+.trading__main__container__content__search__coin__card {
+  width: 100%;
+  padding: 1em;
+  border-radius: 14px;
+  background: $black100;
+}
+.trading__main__container__content__search__coin__card__para {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: $white;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 0.8em;
+}
+.trading__main__container__content__search__coin__card__para span svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5em;
 }
 @media (max-width: 1100px) {
   .trading__main__container__content__btc__usd__card {

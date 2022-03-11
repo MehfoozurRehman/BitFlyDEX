@@ -87,7 +87,7 @@ export default function Header() {
           <NavLink title="IDO" to="/governance-proposals" />
           <NavLink
             title="Earn"
-            to="/"
+            to="/pool-trade"
             list={[
               {
                 title: "LOREM IPSUM",

@@ -321,6 +321,18 @@
   align-items: center;
   color: $white;
 }
+.trading__main__container__content__right__card__pool {
+  width: 100%;
+  background: $black200;
+  height: fit-content;
+  padding: 1em;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $white;
+  margin-top: 1em;
+}
 .decentralized__trading__sub__cards__wrapper__right__bottom__card__wrapper__card__btn {
   background: transparent;
   border: 1px solid $white;
@@ -341,7 +353,7 @@
   align-items: center;
 }
 .decentralized__trading__sub__cards__wrapper__right__bottom__card__wrapper__card__img {
-  width: 69px;
+  width: 60px;
   margin-right: 0.5em;
 }
 .decentralized__trading__sub__cards__wrapper__right__bottom__card__wrapper__card__left__content__heading {
