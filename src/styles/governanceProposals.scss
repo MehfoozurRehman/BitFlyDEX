@@ -72,6 +72,12 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
+  border: 1px solid $black200;
+  cursor: pointer;
+}
+.proposal__list__wrapper__item:hover {
+  border: 1px solid $white;
+  transition: 400ms ease-in-out;
 }
 .proposal__list__wrapper__item__left {
   display: flex;

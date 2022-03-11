@@ -74,7 +74,7 @@ export default class Graph extends PureComponent {
 
   render() {
     return (
-      <ResponsiveContainer width="100%" minHeight={550} height="100%">
+      <ResponsiveContainer width="100%" minHeight={480} height="100%">
         <BarChart
           width={500}
           height={300}

@@ -26,6 +26,14 @@ function GovernanceProposals() {
             <ProposalItem />
             <ProposalItem />
             <ProposalItem />
+            <ProposalItem />
+            <ProposalItem />
+            <ProposalItem />
+            <ProposalItem />
+            <ProposalItem />
+            <ProposalItem />
+            <ProposalItem />
+            <ProposalItem />
           </div>
         </div>
       </div>

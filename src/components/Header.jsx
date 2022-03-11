@@ -84,7 +84,7 @@ export default function Header() {
       {isNavOpen ? (
         <div className="header__nav">
           <NavLink title="Home" to="/" />
-          <NavLink title="IDO" to="/" />
+          <NavLink title="IDO" to="/governance-proposals" />
           <NavLink
             title="Earn"
             to="/"

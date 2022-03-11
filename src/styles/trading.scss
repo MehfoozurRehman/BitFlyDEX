@@ -15,8 +15,9 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
+  margin-bottom: 1em;
 }
 .trading__main__container__content__btc__usd__card {
   width: 70%;
@@ -24,9 +25,11 @@
   background: $black100;
   color: $white;
   border-radius: 14px;
+  height: fit-content;
+  min-height: 600px;
 }
 .trading__main__container__content__btc__usd__card__entry__container {
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   margin: 0.5em 0em;
@@ -40,10 +43,140 @@
   color: $white;
 }
 .trading__main__container__content__btc__usd__card__entry__wrapper {
-  font-size: 14px;
+  font-size: 12px;
+  text-align: center;
   color: $white;
 }
 .trading__main__container__content__graph {
   width: 100%;
   margin-top: 1em;
+}
+.trading__main__container__content__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 28%;
+}
+.trading__main__container__content__right__card {
+  color: $white;
+  width: 100%;
+  background: $black100;
+  border-radius: 14px;
+  padding: 2em 0em;
+  margin-bottom: 2em;
+}
+.trading__main__container__content__right__card__heading {
+  padding: 0em 1em;
+  font-size: 20px;
+  color: $white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.trading__main__container__content__right__card__svg__wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0em 1em;
+  margin-top: 1em;
+}
+.trading__main__container__content__right__card__svg {
+  margin-right: 1em;
+  padding: 0.2em;
+  border-radius: 6px;
+}
+.trading__main__container__content__right__card__svg:hover {
+  background: $black200;
+}
+.trading__main__container__content__right__card__svg svg {
+  width: 20px;
+  height: 20px;
+  color: $white;
+}
+.trading__main__container__content__right__card__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: $black200;
+  padding: 0.6em 1em;
+  margin-top: 1em;
+}
+.trading__main__container__content__right__card__header__entry {
+  font-size: 16px;
+  color: $white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.trading__main__container__content__right__card__col:hover {
+  background: $black200;
+  transition: 300ms ease-in-out;
+}
+.trading__main__container__content__right__card__col {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4em 1em;
+  cursor: pointer;
+}
+.trading__main__container__content__btc__usd__card__header {
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+  align-items: center;
+}
+.trading__main__container__content__btc__usd__card__nav {
+  font-size: 16px;
+  color: $white;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.trading__main__container__content__btc__usd__card__nav:hover {
+  font-weight: 600;
+}
+.trading__main__container__content__btc__usd__card__content {
+  width: 100%;
+  height: fit-content;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.trading__main__container__content__btc__usd__card__content__heading {
+  margin-top: 1em;
+  color: $white;
+  font-size: 20px;
+  font-weight: 600;
+}
+.trading__main__container__content__btc__usd__card__content__para {
+  font-size: 16px;
+  color: $white;
+  margin-top: 0.3em;
+}
+.trading__main__container__content__assets__card__col {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.6em;
+}
+.trading__main__container__content__assets__card__col__entry {
+  font-size: 14px;
+  color: $white;
+}
+.trading__main__container__content__assets__card__heading {
+  font-size: 20px;
+  color: $white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.trading__main__container__content__assets__card {
+  width: 100%;
+  height: fit-content;
+  padding: 2em 1em;
+  background: $black100;
+  border-radius: 14px;
+  margin-bottom: 2em;
 }
