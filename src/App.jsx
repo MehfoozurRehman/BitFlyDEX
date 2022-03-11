@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import ConnectWallet from "./screens/ConnectWallet";
 import DecentralizedTrading from "./screens/DecentralizedTrading";
+import Farming from "./screens/Farming";
 import GovernanceProposals from "./screens/GovernanceProposals";
 import Home from "./screens/Home";
 import PoolAndTrade from "./screens/PoolAndTrade";
@@ -26,6 +27,7 @@ export default function App() {
         <Route path="/trading" element={<Trading />} />
         <Route path="/pool-trade" element={<PoolAndTrade />} />
         <Route path="/vaults" element={<Vaults />} />
+        <Route path="/farming" element={<Farming />} />
       </Routes>
       <Footer />
     </div>

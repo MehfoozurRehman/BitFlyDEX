@@ -180,7 +180,7 @@ export default function Header() {
           />
           <NavLink
             title="Win"
-            to="/"
+            to="/farming"
             list={[
               {
                 title: "LOREM IPSUM",

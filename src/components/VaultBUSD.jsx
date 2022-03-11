@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import CoinPic from "../assets/CoinPic.png";
 
-export default function VaultBUSD() {
+export default function VaultBUSD({ style }) {
   return (
-    <div className="vaults__main__container__content__card">
+    <div style={style} className="vaults__main__container__content__card">
       <div className="vaults__main__container__content__card__heading">
         BUSD
       </div>

@@ -14,6 +14,14 @@
   background: $black100;
   color: $white;
 }
+.farming__main__container__card {
+  width: 100%;
+  height: fit-content;
+  padding: 3em;
+  border-radius: 14px;
+
+  color: $white;
+}
 .vaults__main__container__card__content {
   display: flex;
   justify-content: space-between;
@@ -106,6 +114,15 @@
   width: 100%;
   margin: 2em 0em;
 }
+.farming__main__container__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 2em 0em;
+}
+
 .vaults__main__container__content__card {
   color: $white;
   width: 32%;
@@ -371,6 +388,27 @@
   text-align: center;
   margin-top: 2em;
 }
+.css-jsexje-MuiSwitch-thumb {
+  background: $white !important;
+}
+.css-1yjjitx-MuiSwitch-track {
+  background: $WhiteGray !important;
+}
+.vaults__main__container__card__content__links {
+  display: flex;
+  align-items: center;
+}
+.vaults__main__container__card__content__links__heading {
+  font-size: 16px;
+  color: $WhiteGray;
+  font-weight: 600;
+  margin-right: 3em;
+  text-decoration: none;
+}
+.vaults__main__container__card__content__links__heading:hover {
+  color: $white;
+  transition: 300ms ease-in-out;
+}
 @media (max-width: 1100px) {
   .stack__calculation__container__card {
     width: 85%;
@@ -399,6 +437,7 @@
   }
   .vaults__main__container__content__card {
     width: 100%;
+    margin: 0px !important;
   }
   .stack__calculation__container__card__input__container__row {
     flex-direction: column;
