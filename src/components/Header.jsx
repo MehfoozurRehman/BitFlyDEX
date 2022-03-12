@@ -149,7 +149,7 @@ export default function Header() {
           />
           <NavLink
             title="NFT's"
-            to="/"
+            to="/nft"
             list={[
               {
                 title: "LOREM IPSUM",

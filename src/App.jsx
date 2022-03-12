@@ -7,6 +7,7 @@ import DecentralizedTrading from "./screens/DecentralizedTrading";
 import Farming from "./screens/Farming";
 import GovernanceProposals from "./screens/GovernanceProposals";
 import Home from "./screens/Home";
+import NFT from "./screens/NFT";
 import PoolAndTrade from "./screens/PoolAndTrade";
 import Pools from "./screens/Pools";
 import Trading from "./screens/Trading";
@@ -30,6 +31,7 @@ export default function App() {
         <Route path="/vaults" element={<Vaults />} />
         <Route path="/farming" element={<Farming />} />
         <Route path="/pools" element={<Pools />} />
+        <Route path="/nft" element={<NFT />} />
       </Routes>
       <Footer />
     </div>
