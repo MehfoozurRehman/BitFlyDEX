@@ -1,0 +1,307 @@
+@import "./global.scss";
+.home__jumbotron__left__img {
+  width: 500px;
+}
+.refer__jumbotron__right {
+  width: 45%;
+}
+.refer__jumbotron {
+  width: 100%;
+  max-width: 1440px;
+  height: fit-content;
+  margin: 8em 0em;
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.refer__jumbotron__left {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.refer__jumbotron__heading {
+  font-size: 30px;
+  color: $white;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.3em;
+}
+.refer__jumbotron__time {
+  display: flex;
+  align-items: center;
+}
+.refer__jumbotron__time__left {
+  padding: 0.4em 1em;
+  border: 1px solid $white;
+  border-radius: 4px;
+  color: $white;
+  font-size: 12px;
+}
+.refer__jumbotron__time__right {
+  font-size: 16px;
+  color: $white;
+  margin-left: 1em;
+}
+.refer__jumbotron__para {
+  font-size: 16px;
+  color: $WhiteGray;
+  margin: 01em 0em;
+}
+.refer__jumbotron__time__conuter {
+  background: $white;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+}
+.refer__jumbotron__time__conuter__entry {
+  padding: 0.4em 1em;
+  color: $black;
+  font-size: 40px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.refer__jumbotron__time__conuter__entry span {
+  font-size: 14px;
+}
+.refer__jumbotron__time__conuter__entry::after {
+  position: absolute;
+
+  right: 0px;
+  content: "";
+  height: 80%;
+  width: 1px;
+  background: rgb(0, 0, 0, 0.3);
+}
+.refer__jumbotron__content {
+  width: 100%;
+  max-width: 1440px;
+  height: fit-content;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.refer__jumbotron__content__card__sub__card {
+  background: $black200;
+  width: 49%;
+  padding: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 14px;
+}
+.refer__jumbotron__content__card__sub__card__left__heading {
+  font-size: 18px;
+  font-weight: 600;
+  color: $white;
+  margin-bottom: 0.3em;
+}
+.refer__jumbotron__content__card__sub__card__left__para {
+  font-size: 16px;
+  color: $WhiteGray;
+}
+.refer__jumbotron__content__card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  background: $black100;
+  border-radius: 14px;
+  margin-bottom: 2em;
+}
+.refer__jumbotron__content__card__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.refer__jumbotron__content__card__btn__wrapper {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.refer__jumbotron__content__card__btn {
+  background: $white;
+  padding: 1em 3em;
+  color: $black;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 2em;
+  width: 100%;
+}
+.refer__jumbotron__content__card__btn:hover {
+  background: $black200;
+  color: $white;
+  transition: 300ms ease-in-out;
+}
+.refer__jumbotron__content__card__heading {
+  font-size: 30px;
+  color: $white;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+.refer__jumbotron__content__ranking__list__card {
+  width: 100%;
+  height: fit-content;
+  padding: 2em;
+  background: $black100;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.refer__jumbotron__content__ranking__list__card__heading {
+  font-size: 30px;
+  color: $white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.refer__jumbotron__content__ranking__list__card__headings__row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-top: 2em;
+}
+.refer__jumbotron__content__ranking__list__card__headings__row__entry {
+  width: 25%;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: $white;
+  font-weight: 600;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.refer__jumbotron__content__ranking__list__card__para__row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-top: 1em;
+  background: $black200;
+  border-radius: 8px;
+  padding: 0.8em;
+}
+.refer__jumbotron__content__ranking__list__card__para__row__entry {
+  width: 25%;
+  font-size: 16px;
+  color: $white;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.refer__jumbotron__content__egligible_card {
+  width: 70%;
+  border-radius: 14px;
+  background: $black100;
+  padding: 3em 2em;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+.refer__jumbotron__content__egligible_card__left {
+  width: 47%;
+  position: relative;
+}
+.refer__jumbotron__content__egligible_card__left::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  content: "";
+  width: 1px;
+  height: 100%;
+  background: $WhiteGray;
+}
+.refer__jumbotron__content__egligible_card__right {
+  width: 50%;
+}
+.refer__jumbotron__content__egligible_card__left__heading {
+  font-size: 24px;
+  color: $white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.refer__jumbotron__content__egligible_card__left__para {
+  font-size: 14px;
+  color: $WhiteGray;
+  margin-top: 0.4em;
+}
+.refer__jumbotron__content__egligible_card__right__sub__card {
+  width: 90%;
+  padding: 0.8em;
+  border-radius: 8px;
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $white;
+  background: $black200;
+}
+@media (max-width: 1100px) {
+  .refer__jumbotron {
+    flex-direction: column;
+  }
+  .refer__jumbotron__right {
+    width: 100%;
+    margin-bottom: 4em;
+  }
+  .refer__jumbotron__content__card__wrapper {
+    flex-direction: column;
+  }
+  .refer__jumbotron__content__card__sub__card {
+    margin-bottom: 1em;
+    width: 100%;
+  }
+  .refer__jumbotron__content__egligible_card {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .refer__jumbotron__content__egligible_card {
+    flex-direction: column;
+  }
+  .refer__jumbotron__content__egligible_card__left {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  .refer__jumbotron__content__egligible_card__right {
+    width: 100%;
+  }
+  .refer__jumbotron__content__egligible_card__left::after {
+    display: none;
+  }
+  .home__jumbotron__left__img {
+    width: 300px;
+  }
+  .refer__jumbotron__time__conuter__entry {
+    padding: 0.3em;
+  }
+  .refer__jumbotron__content__card__btn__wrapper {
+    width: 100%;
+  }
+  .refer__jumbotron__content__ranking__list__card__para__row,
+  .refer__jumbotron__content__ranking__list__card__headings__row {
+    flex-direction: column;
+  }
+  .refer__jumbotron__content__ranking__list__card__para__row__entry,
+  .refer__jumbotron__content__ranking__list__card__headings__row__entry {
+    width: 100%;
+    margin-top: 0.3em;
+  }
+}
