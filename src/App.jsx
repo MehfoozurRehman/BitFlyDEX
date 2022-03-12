@@ -8,6 +8,7 @@ import Farming from "./screens/Farming";
 import GovernanceProposals from "./screens/GovernanceProposals";
 import Home from "./screens/Home";
 import PoolAndTrade from "./screens/PoolAndTrade";
+import Pools from "./screens/Pools";
 import Trading from "./screens/Trading";
 import Vaults from "./screens/Vaults";
 import "./styles/export.scss";
@@ -28,6 +29,7 @@ export default function App() {
         <Route path="/pool-trade" element={<PoolAndTrade />} />
         <Route path="/vaults" element={<Vaults />} />
         <Route path="/farming" element={<Farming />} />
+        <Route path="/pools" element={<Pools />} />
       </Routes>
       <Footer />
     </div>
