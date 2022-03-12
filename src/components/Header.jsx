@@ -210,7 +210,7 @@ export default function Header() {
             ]}
           />
           <Link
-            to="/"
+            to="/refer"
             className="header__link__button header__link__button__primary"
           >
             $2.0454

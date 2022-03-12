@@ -11,6 +11,7 @@ import NFT from "./screens/NFT";
 import NFTMarketPlace from "./screens/NFTMarketPlace";
 import PoolAndTrade from "./screens/PoolAndTrade";
 import Pools from "./screens/Pools";
+import ReferPage from "./screens/ReferPage";
 import Trading from "./screens/Trading";
 import Vaults from "./screens/Vaults";
 import "./styles/export.scss";
@@ -34,6 +35,7 @@ export default function App() {
         <Route path="/pools" element={<Pools />} />
         <Route path="/nft" element={<NFT />} />
         <Route path="/nft-market-place" element={<NFTMarketPlace />} />
+        <Route path="/refer" element={<ReferPage />} />
       </Routes>
       <Footer />
     </div>
