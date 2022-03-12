@@ -64,6 +64,24 @@
   background: $black;
   transition: 400ms ease-in-out;
 }
+.nft__card__secondary {
+  width: 32%;
+  height: fit-content;
+  background: $black100;
+  border-radius: 14px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 1.5em;
+  text-decoration: none;
+}
+.nft__card__secondary:hover {
+  background: $black200;
+  transition: 400ms ease-in-out;
+}
 .nft__container__content__left__casted__nft__card {
   width: 100%;
   height: fit-content;
@@ -116,7 +134,198 @@
   color: $WhiteGray;
   margin-top: 0.5em;
 }
+.nft__market__place__container {
+  width: 100%;
+  max-width: 1440px;
+  height: fit-content;
+  padding: 2em;
+  margin: 8em 0em;
+  color: $white;
+}
+.nft__market__place__container__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.nft__market__place__container__content__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.nft__market__place__container__content__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 2em;
+}
+.nft__market__place__container__content__footer__left {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.nft__market__place__container__content__header__heading {
+  font-size: 30px;
+  color: $white;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.nft__market__place__container__content__header__btn__wrapper {
+  display: flex;
+  align-items: center;
+}
+.nft__market__place__container__content__header__btn__white {
+  text-decoration: none;
+  color: $white;
+  padding: 0.7em 1.4em;
+  border-radius: 8px;
+  font-size: 14px;
+  background: transparent;
+  border: 1px solid $white;
+  margin-right: 1em;
+}
+.nft__market__place__container__content__header__btn__white:hover {
+  background: $white;
+  color: $black;
+  transition: 300ms ease-in-out;
+}
+.nft__market__place__container__content__header__btn__black {
+  text-decoration: none;
+  color: $black;
+  padding: 0.7em 1em;
+  border-radius: 8px;
+  font-size: 14px;
+  background: $white;
+  border: 1px solid $white;
+  margin-right: 1em;
+}
+.nft__market__place__container__content__header__btn__black:hover {
+  background: $black;
+  color: $white;
+  transition: 300ms ease-in-out;
+}
+
+.nft__market__place__container__content__footer__entry__wrapper {
+  position: absolute;
+  background: $black200;
+  padding: 1em;
+  top: 10;
+  left: 6px;
+  border-radius: 8px;
+}
+.nft__market__place__container__content__footer__right {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.nft__market__place__container__content__footer__left__btn__wrapper {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgb(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
+.nft__market__place__container__content__footer__right__dropdown {
+  display: flex;
+  justify-items: center;
+  font-size: 16px;
+  color: $white;
+  border: 1px solid rgb(255, 255, 255, 0.2);
+  padding: 0.7em;
+  text-decoration: none;
+  border-radius: 8px;
+  position: relative;
+  margin-right: 1em;
+  min-width: 150px;
+}
+.nft__market__place__container__content__footer__right__dropdown svg {
+  width: 20px;
+  height: 20px;
+  margin-left: 1em;
+}
+.nft__market__place__container__content__footer__right__dropdown__wrapper {
+  position: absolute;
+  top: 46px;
+  left: 0;
+  background: $black200;
+  border-radius: 8px;
+  padding: 0.5em;
+  z-index: 99;
+  width: 150px;
+  display: none;
+}
+.nft__market__place__container__content__footer__right__dropdown__wrapper__entry {
+  padding: 0.5em;
+}
+.nft__market__place__container__content__footer__right__dropdown__wrapper__entry:hover {
+  background: $black100;
+  border-radius: 4px;
+  transition: 300ms ease-in-out;
+}
+.nft__market__place__container__content__footer__right__dropdown:hover
+  .nft__market__place__container__content__footer__right__dropdown__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.nft__market__place__container__cards__wrapper {
+  width: 100%;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 2em;
+}
+.nft__card__header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 0.7em;
+}
+.nft__card__row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+.nft__card__header__heading {
+  font-size: 20px;
+  color: $white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.nft__card__row__entry__left {
+  font-size: 12px;
+  color: $white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.nft__card__row__entry__left {
+  font-size: 14px;
+  color: $WhiteGray;
+}
+.nft__card__row__entry__right {
+  font-size: 14px;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+}
+.nft__card__row__entry__right span {
+  font-size: 12px;
+}
 @media (max-width: 1000px) {
+  .nft__card__secondary {
+    width: 49%;
+  }
+  .nft__market__place__container__content__footer {
+    flex-direction: column;
+  }
+  .nft__market__place__container__content__footer__left {
+    margin: 2em 0em;
+  }
   .nft__container__content__left {
     width: 100%;
   }
@@ -124,9 +333,48 @@
     width: 100%;
     margin-top: 2em;
   }
+  .nft__market__place__container__content__footer__right {
+    width: 100%;
+  }
+  .nft__market__place__container__content__header {
+    flex-direction: column;
+  }
+  .nft__market__place__container__content__header__btn__wrapper {
+    width: 100%;
+    margin-top: 2em;
+    justify-content: center;
+  }
 }
 @media (max-width: 650px) {
+  .nft__market__place__container__content__header__btn__wrapper {
+    flex-direction: column;
+  }
+  .nft__market__place__container__content__header__btn__white,
+  .nft__market__place__container__content__header__btn__black {
+    width: 100%;
+    margin-top: 1em;
+  }
   .nft__card__width__50 {
+    width: 100%;
+  }
+  .nft__market__place__container__content__footer__left__btn__wrapper {
+    width: 300px;
+  }
+  .nft__market__place__container__content__footer__right {
+    flex-direction: column;
+  }
+  .nft__market__place__container__content__footer__right__dropdown {
+    width: 100%;
+    margin-bottom: 1em;
+    justify-content: space-between;
+  }
+  .nft__market__place__container__content__footer__right__dropdown__wrapper {
+    width: 100%;
+  }
+  .nft__market__place__container__content__footer {
+    margin: 0px;
+  }
+  .nft__card__secondary {
     width: 100%;
   }
 }

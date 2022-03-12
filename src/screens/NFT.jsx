@@ -5,7 +5,7 @@ import nftPic from "../assets/nftPic.png";
 function NFTCard() {
   return (
     <Link
-      to="/"
+      to="/nft-market-place"
       onClick={() => {
         window.scrollTo({
           top: 0,
