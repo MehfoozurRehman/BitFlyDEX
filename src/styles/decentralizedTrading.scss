@@ -371,6 +371,74 @@
   font-size: 14px;
   color: $white;
 }
+.decentralized__protocol__content__card {
+  width: 100%;
+  background: $black100;
+  color: $white;
+  padding: 2em;
+  border-radius: 14px;
+  margin-top: 2em;
+}
+.decentralized__protocol__content__card__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.decentralized__protocol__content__card__header__right {
+  font-size: 16px;
+  color: $white;
+  font-weight: 600;
+}
+.decentralized__protocol__content__card__top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.decentralized__protocol__content__card__top__left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+.decentralized__protocol__content__card__top__right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: start;
+  margin-top: 1em;
+}
+.decentralized__protocol__content__card__top__left__sub__heading {
+  font-size: 16px;
+  color: $WhiteGray;
+  font-weight: 600;
+}
+.decentralized__protocol__content__card__top__left__heading {
+  font-size: 34px;
+  color: $white;
+  font-weight: 600;
+  margin-top: 0.2em;
+}
+.decentralized__protocol__content__card__top__right__card {
+  width: 48%;
+  background: $black200;
+  border-radius: 12px;
+  padding: 1em 2em;
+  display: flex;
+  align-items: center;
+}
+.decentralized__protocol__content__card__top__right__card__pic {
+  width: 50px;
+  margin-right: 1em;
+}
+.decentralized__protocol__content__divider {
+  width: 90%;
+  height: 1px;
+  background: rgb(255, 255, 255, 0.3);
+  margin: 3em auto;
+}
 @media (max-width: 1200px) {
   .decentralized__trading__main__container__footer__col {
     width: 33%;
@@ -395,6 +463,13 @@
 
 // }
 @media (max-width: 850px) {
+  .decentralized__protocol__content__card__top {
+    flex-direction: column;
+  }
+  .decentralized__protocol__content__card__top__left,
+  .decentralized__protocol__content__card__top__right {
+    width: 100%;
+  }
   .decentralized__trading__sub__cards__wrapper__right__bottom__card__wrapper__card {
     width: 100%;
     margin-bottom: 3em;
@@ -412,6 +487,13 @@
 @media (max-width: 550px) {
   .decentralized__trading__main__container__footer__col {
     width: 100%;
+  }
+  .decentralized__protocol__content__card__top__right {
+    flex-direction: column;
+  }
+  .decentralized__protocol__content__card__top__right__card {
+    width: 100%;
+    margin-bottom: 1em;
   }
   .decentralized__trading__sub__cards__wrapper__left__card__nft {
     width: 100%;

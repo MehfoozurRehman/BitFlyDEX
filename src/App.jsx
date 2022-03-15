@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import ConnectWallet from "./screens/ConnectWallet";
+import DecentralizedProtocol from "./screens/DecentralizedProtocol";
 import DecentralizedTrading from "./screens/DecentralizedTrading";
 import Farming from "./screens/Farming";
 import GovernanceProposals from "./screens/GovernanceProposals";
@@ -73,6 +74,10 @@ export default function App() {
         <Route path="/refer-competition" element={<ReferCompetition />} />
         <Route path="/buying-competition" element={<BuyingCompetition />} />
         <Route path="/position-bond" element={<PositionBond />} />
+        <Route
+          path="/decentralized-protocol"
+          element={<DecentralizedProtocol setIsSetting={setIsSetting} />}
+        />
       </Routes>
       <Footer />
     </div>
