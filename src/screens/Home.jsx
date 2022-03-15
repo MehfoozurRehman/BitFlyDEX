@@ -6,6 +6,7 @@ import Ecosystem from "../components/Ecosystem";
 import Tokenomics from "../components/Tokenomics";
 import WhyUs from "../components/WhyUs";
 import KeepTrading from "../components/KeepTrading";
+import RoadMap from "../components/RoadMap";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Ecosystem />
       <Tokenomics />
       <WhyUs />
+      <RoadMap />
       <KeepTrading />
     </>
   );

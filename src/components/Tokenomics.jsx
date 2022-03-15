@@ -1,6 +1,5 @@
 import React from "react";
 import tokenomicsPic from "../assets/tokenomicsPic.png";
-import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Slider from "@mui/material/Slider";
 import tokenimicsSvg1 from "../assets/tokenimicsSvgs/tokenimicsSvg1.png";
