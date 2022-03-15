@@ -15,39 +15,18 @@ function OrderBook() {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="feather feather-trending-up"
-          >
-            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
-            <polyline points="17 6 23 6 23 12"></polyline>
-          </svg>
-        </a>
-        <a
-          href="
-        "
-          className="trading__main__container__content__right__card__svg"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24.778"
-            height="22.417"
-            viewBox="0 0 24.778 22.417"
+            width="20.187"
+            height="18.336"
+            viewBox="0 0 20.187 18.336"
           >
             <g id="sort-both" transform="translate(1.768 1.768)">
               <path
                 id="Path_505"
                 data-name="Path 505"
-                d="M26.775,10.054l-4.72-4.72m0,0-4.72,4.72m4.72-4.72V19.494"
-                transform="translate(-5.532 -5.333)"
+                d="M24.734,9.033l-3.7-3.7m0,0-3.7,3.7m3.7-3.7v11.1"
+                transform="translate(-8.083 -5.333)"
                 fill="none"
-                stroke="#fff"
+                stroke="#437259"
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2.5"
@@ -55,10 +34,10 @@ function OrderBook() {
               <path
                 id="Path_506"
                 data-name="Path 506"
-                d="M4,20.107l4.72,4.72m0,0,4.72-4.72m-4.72,4.72V10.667"
-                transform="translate(-3.999 -5.946)"
+                d="M4,18.067l3.7,3.7m0,0,3.7-3.7m-3.7,3.7v-11.1"
+                transform="translate(-3.999 -6.967)"
                 fill="none"
-                stroke="#fff"
+                stroke="#7c323a"
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2.5"
@@ -73,18 +52,43 @@ function OrderBook() {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="feather feather-trending-down"
+            width="17.931"
+            height="16.161"
+            viewBox="0 0 17.931 16.161"
           >
-            <polyline points="23 18 13.5 8.5 8.5 13.5 1 6"></polyline>
-            <polyline points="17 18 23 18 23 12"></polyline>
+            <path
+              id="sort-asc"
+              d="M15.391,7.54V18.161M3,4H3ZM3,7.54H3Zm0,3.54H3Zm8.851,0,3.54-3.54Zm3.54-3.54,3.54,3.54Z"
+              transform="translate(-2 -3)"
+              fill="none"
+              stroke="#437259"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+        </a>
+        <a
+          href="
+        "
+          className="trading__main__container__content__right__card__svg"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14.215"
+            height="14.442"
+            viewBox="0 0 14.215 14.442"
+          >
+            <path
+              id="sort-desc"
+              d="M12.181,16.031,14.8,13.023M3,4H3ZM3,7.008H3Zm0,3.008H3Zm9.181-3.008v0Zm0,9.023L9.558,13.023Z"
+              transform="translate(-2 -3)"
+              fill="none"
+              stroke="#7c323a"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
           </svg>
         </a>
       </div>
@@ -224,6 +228,12 @@ function RecentOrder() {
         </div>
       </div>
     </div>
+  );
+}
+
+function ConnectWallet() {
+  return (
+    <div className="trading__main__container__content__connect__wallet__card"></div>
   );
 }
 

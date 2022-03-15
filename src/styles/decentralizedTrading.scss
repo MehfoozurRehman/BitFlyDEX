@@ -201,6 +201,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2em;
 }
 
 .decentralized__trading__sub__cards__wrapper__left__card__nft__btn {
@@ -311,10 +312,10 @@
   margin-top: 1em;
 }
 .decentralized__trading__sub__cards__wrapper__right__bottom__card__wrapper__card {
-  width: 46%;
+  width: 48%;
   background: $black100;
   height: fit-content;
-  padding: 1em;
+  padding: 2em 1em;
   border-radius: 14px;
   display: flex;
   justify-content: space-between;

@@ -136,6 +136,17 @@ export default function ConnectWallet() {
 
   return (
     <div className="connect__main__container">
+      <div className="connect__wallet__jumbotron__wrapper">
+        <h1 className="governance__jumbotron__heading">Swap</h1>
+        <p className="governance__jumbotron__para">
+          On-chain governance is a system for managing and implementing changes
+          to cryptocurrency blockchains. In this type of governance, rules for
+          instituting changes are encoded into the blockchain protocol.
+          Developers propose changes through code updates and each node votes on
+          whether to accept or reject the proposed change
+        </p>
+        <button className="governance__jumbotron__btn"> Learn More</button>
+      </div>
       <div className="connect__main__container__content">
         <div className="connect__main__container__content__nav__wrapper">
           <NavLink title="SWAP" selected={selected} setSelected={setSelected} />
@@ -168,18 +179,17 @@ export default function ConnectWallet() {
             <div className="connect__main__container__content__centered__svg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-arrow-down"
+                width="24.469"
+                height="31.5"
+                viewBox="0 0 24.469 31.5"
               >
-                <line x1="12" y1="5" x2="12" y2="19"></line>
-                <polyline points="19 12 12 19 5 12"></polyline>
+                <path
+                  id="Icon_ionic-md-swap"
+                  data-name="Icon ionic-md-swap"
+                  d="M9.232,16.249l-6.982,7,6.982,6.989V24.989H21.5V21.495H9.232ZM33.75,12.755,26.768,5.766v5.245H14.5v3.495h12.27v5.245Z"
+                  transform="translate(30.234 -2.25) rotate(90)"
+                  fill="#fff"
+                />
               </svg>
             </div>
             <InputBox />

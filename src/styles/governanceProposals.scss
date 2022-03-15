@@ -17,10 +17,19 @@
   flex-direction: column;
   align-items: center;
 }
+.connect__wallet__jumbotron__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+}
 .governance__jumbotron__heading {
   font-size: 30px;
   text-transform: uppercase;
   font-weight: 600;
+  text-align: center;
+  color: $white;
 }
 .governance__jumbotron__para {
   text-align: center;
@@ -42,7 +51,7 @@
 .governance__jumbotron__btn:hover {
   color: $black200;
   background-color: $white;
-  transition: all 0.2s;
+  transition: all 400ms;
 }
 .proposal__list {
   margin-top: 2rem;
@@ -115,7 +124,9 @@
   width: 22px;
   height: 22px;
 }
-
+.MuiPaginationItem-page {
+  color: $white !important;
+}
 @media (max-width: 1000px) {
   .governance__jumbotron__para {
     width: 75%;
@@ -144,6 +155,9 @@
     margin: 0.5rem 0;
     // flex: 2;
   }
+  .governance__jumbotron__para {
+    width: 100%;
+  }
 }
 .pagination__container {
   background-color: $black200;
@@ -151,9 +165,9 @@
   border-radius: 10px;
 }
 .Mui-selected {
-  background-color: #fff !important;
+  background-color: $black100 !important;
 }
 
 .MuiTouchRipple-root {
-  color: white !important;
+  color: $black200 !important;
 }

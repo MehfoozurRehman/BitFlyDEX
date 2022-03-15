@@ -245,15 +245,17 @@ export default function DecentralizedTrading() {
           <div className="decentralized__trading__sub__cards__wrapper__right__top">
             <NFTCard />
             <NFTCard />
+            <NFTCard />
+            <NFTCard />
           </div>
-          <div className="decentralized__trading__sub__cards__wrapper__right__bottom">
-            <div className="decentralized__trading__sub__cards__wrapper__right__bottom__heading">
-              Top Farms
-            </div>
-            <div className="decentralized__trading__sub__cards__wrapper__right__bottom__card__wrapper">
-              <BUSDCard />
-              <BUSDCard />
-            </div>
+        </div>
+        <div className="decentralized__trading__sub__cards__wrapper__right__bottom">
+          <div className="decentralized__trading__sub__cards__wrapper__right__bottom__heading">
+            Top Farms
+          </div>
+          <div className="decentralized__trading__sub__cards__wrapper__right__bottom__card__wrapper">
+            <BUSDCard />
+            <BUSDCard />
           </div>
         </div>
       </div>

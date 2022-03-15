@@ -5,7 +5,8 @@
   min-height: 100vh;
   background: url(../assets/connect_bg.png) no-repeat;
   background-size: cover;
-
+  margin-top: 8em;
+  flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,9 +17,9 @@
   color: $white;
   border-radius: 14px;
   width: 100%;
-  max-width: 1000px;
+  max-width: 900px;
   height: fit-content;
-  margin: 8em 2em;
+  margin: 4em 2em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -213,6 +214,10 @@
   justify-content: center;
   align-items: center;
   margin-top: 2em;
+}
+.connect__main__container__content__centered__svg svg {
+  width: 22px;
+  height: 22px;
 }
 .connect__main__container__content__price__wrapper {
   width: 100%;

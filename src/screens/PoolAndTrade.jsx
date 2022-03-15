@@ -61,7 +61,7 @@ function PoolSubCard() {
   );
 }
 
-function BuyAndSellBtn({ selected, setSelected, title }) {
+function BuyAndSellBtn({ selected, setSelected, title, style }) {
   return (
     <button
       onClick={() => {
@@ -72,6 +72,7 @@ function BuyAndSellBtn({ selected, setSelected, title }) {
           ? "trading__main__container__buy__and__sell__card__header__entry__heading trading__main__container__buy__and__sell__card__header__entry__input__selected"
           : "trading__main__container__buy__and__sell__card__header__entry__heading"
       }
+      style={style}
     >
       {title}
     </button>
@@ -89,6 +90,7 @@ function BuyAndSell() {
           setSelected={setSelected}
         />
         <BuyAndSellBtn
+          style={{ color: "#7C323A" }}
           title="Sell"
           selected={selected}
           setSelected={setSelected}

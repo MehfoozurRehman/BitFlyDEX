@@ -284,7 +284,7 @@
   border-radius: 6px;
   background: transparent;
   border: none;
-  color: $white;
+  color: #437259;
   outline: none;
   cursor: pointer;
 }
@@ -332,6 +332,12 @@
   color: $white;
 }
 .trading__main__container__content__btc__usd__card__content__heading {
+  font-size: 20px;
+  color: $white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.trading__main__container__content__right__card__main__pool__heading {
   font-size: 20px;
   color: $white;
   font-weight: 600;
