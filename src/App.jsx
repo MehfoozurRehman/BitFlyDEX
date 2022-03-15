@@ -21,6 +21,7 @@ import SettingPopup from "./screens/SettingPopup";
 import StartTradingPopup from "./screens/StartTradingPopup";
 import Trading from "./screens/Trading";
 import TransferNFTPopup from "./screens/TransferNFTPopup";
+import UpdateReward from "./screens/UpdateReward";
 import Vaults from "./screens/Vaults";
 import "./styles/export.scss";
 
@@ -78,6 +79,7 @@ export default function App() {
           path="/decentralized-protocol"
           element={<DecentralizedProtocol setIsSetting={setIsSetting} />}
         />
+        <Route path="/update-reward" element={<UpdateReward />} />
       </Routes>
       <Footer />
     </div>

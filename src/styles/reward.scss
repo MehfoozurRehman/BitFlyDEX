@@ -1,0 +1,220 @@
+@import "./global.scss";
+.update__reward__container {
+  width: 100%;
+  max-width: 1440px;
+  height: fit-content;
+  padding: 2em;
+  margin: 8em 0em;
+}
+.update__reward__container__card {
+  width: 100%;
+}
+.update__reward__container__card__content__left__card {
+  width: 100%;
+  max-width: 60%;
+  background: $black100;
+  border-radius: 14px;
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.update__reward__container__card__content__left__card__content__heading {
+  font-size: 20px;
+  color: $white;
+  font-weight: 600;
+}
+.update__reward__container__card__content__left__card__content__para {
+  font-size: 16px;
+  color: $WhiteGray;
+}
+.list__of__vote__container {
+  width: 100%;
+  background: $black100;
+  border-radius: 14px;
+  padding: 2em;
+  margin-top: 3em;
+  color: $white;
+}
+.list__of__vote__container__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.list__of__vote__container__header__heading {
+  font-size: 20px;
+  color: $white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.list__of__vote__container__header__right {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.list__of__vote__container__header__right__card {
+  width: 31%;
+  border-radius: 14px;
+  background: $black200;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 600;
+  color: $white;
+}
+.list__of__vote__container__header__right__card span {
+  font-family: 500;
+  font-size: 14px;
+  margin-top: 0.3em;
+}
+.list__of__vote__container__content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 2em;
+}
+.list__of__vote__container__content__card {
+  width: 49%;
+  background: $black200;
+  padding: 2em;
+  border-radius: 14px;
+}
+.list__of__vote__container__content__card__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.list__of__vote__container__content__card__heading__row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.list__of__vote__container__content__card__heading__row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1em;
+}
+.list__of__vote__container__content__card__heading__row__entry {
+  font-size: 16px;
+  color: $WhiteGray;
+  font-weight: 600;
+  text-align: center;
+  width: 31%;
+}
+.list__of__vote__container__content__card__item__row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1em;
+}
+.list__of__vote__container__content__card__item__row__entry {
+  font-size: 16px;
+  color: $white;
+  font-weight: 500;
+  text-align: center;
+  width: 31%;
+}
+.list__of__vote__container__content__card__header__left,
+.list__of__vote__container__content__card__header__right {
+  color: $white;
+}
+.list__of__vote__container__content__card__heading {
+  font-size: 18px;
+  color: $white;
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+.list__of__vote__container__content__card__para {
+  font-size: 16px;
+  color: $white;
+  margin-top: 1em;
+}
+.list__of__vote__container__content__pending__card {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1em;
+}
+.list__of__vote__container__content__pending__card__left {
+  display: flex;
+  align-items: center;
+}
+.list__of__vote__container__content__pending__card__left__content {
+  margin-left: 1em;
+}
+.list__of__vote__container__content__pending__card__left__content__heading {
+  font-size: 16px;
+  color: $white;
+  font-weight: 600;
+}
+.list__of__vote__container__content__pending__card__left__content__para {
+  font-size: 14px;
+  color: $WhiteGray;
+  margin-top: 0.4em;
+}
+.list__of__vote__container__content__pending__card__right__btn {
+  padding: 0.6em 2em;
+  font-size: 14px;
+  color: $white;
+  border: 1px solid $white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.list__of__vote__container__content__pending__card__right__btn:hover {
+  background: $white;
+  color: $black;
+  transition: 300ms ease-in-out;
+}
+@media (max-width: 1000px) {
+  .list__of__vote__container__content__card {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  .list__of__vote__container__header {
+    flex-direction: column;
+  }
+  .list__of__vote__container__header__right {
+    width: 100%;
+    margin-top: 2em;
+  }
+}
+@media (max-width: 550px) {
+  .list__of__vote__container__header__right {
+    flex-direction: column;
+  }
+  .list__of__vote__container__header__right__card {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  .list__of__vote__container__content__card__item__row__entry,
+  .list__of__vote__container__content__card__heading__row__entry {
+    min-width: 200px !important;
+  }
+  .list__of__vote__container__content__card {
+    width: 600 !important;
+    overflow-x: scroll;
+  }
+  .list__of__vote__container__content__card::-webkit-scrollbar {
+    width: 10px;
+    cursor: pointer;
+  }
+  .list__of__vote__container__content__card::-webkit-scrollbar-thumb {
+    background: $white;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .list__of__vote__container__content__card::-webkit-scrollbar-track {
+    background-color: $black100;
+  }
+}
