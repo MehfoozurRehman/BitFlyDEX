@@ -56,6 +56,22 @@ export default function Vaults() {
           <VaultBUSD />
         </div>
       </div>
+      <div className="connect__main__container__content__centered__svg">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="51.962"
+          height="34.377"
+          viewBox="0 0 51.962 34.377"
+        >
+          <path
+            id="Icon_ionic-md-arrow-dropright"
+            data-name="Icon ionic-md-arrow-dropright"
+            d="M13.5,9,47.877,34.981,13.5,60.962Z"
+            transform="translate(60.962 -13.5) rotate(90)"
+            fill="#fff"
+          />
+        </svg>
+      </div>
       <StakingCalculation />
     </>
   );

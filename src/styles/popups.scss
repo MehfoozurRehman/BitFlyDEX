@@ -1,0 +1,129 @@
+@import "./global.scss";
+.start__trading__popup__container {
+  width: 100%;
+  height: fit-content;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(0, 0, 0, 0.8);
+  z-index: 9999;
+}
+.start__trading__popup__container__content {
+  width: 100%;
+  max-width: 1100px;
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: $black200;
+  border-radius: 14px;
+  position: relative;
+}
+
+.start__trading__popup__container__content__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.start__trading__popup__container__content__header__btn {
+  background: $black100;
+  border: none;
+  outline: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 44px;
+  color: $white;
+  box-shadow: 0px 10px 30px rgb(0, 0, 0, 0.2);
+  cursor: pointer;
+  padding: 0em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.start__trading__popup__container__content__header__btn:hover {
+  background: $black;
+  transition: 400ms ease-in-out;
+  color: red;
+}
+.start__trading__popup__container__content__heading {
+  width: 100%;
+  font-size: 32px;
+  color: $white;
+  font-weight: 600;
+  margin-top: 0.5em;
+}
+.start__trading__popup__container__content__para {
+  font-size: 18px;
+  color: $white;
+  font-weight: 500;
+  margin-top: 0.5em;
+}
+.form-group {
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+  margin-top: 1em;
+  color: $white;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.form-group input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+.form-group label {
+  position: relative;
+  cursor: pointer;
+}
+
+.form-group label:before {
+  content: "";
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid $white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+    inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 1em;
+  border-radius: 7px;
+}
+
+.form-group input:checked + label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 6px;
+  left: 9px;
+  width: 6px;
+  height: 12px;
+  border: solid $white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.start__trading__popup__container__content__btn__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-top: 2em;
+}

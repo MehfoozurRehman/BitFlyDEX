@@ -233,7 +233,7 @@
   background: none;
   border: 1px solid $white;
   border-radius: 6px;
-  font-size: 12px;
+  font-size: 14px;
   color: $white;
   margin: 1em 0em;
   padding: 1em 2em;
@@ -393,6 +393,27 @@
   width: 20px;
   height: 20px;
   margin-right: 0.5em;
+}
+.trading__main__container__content__connect__wallet__card {
+  width: 100%;
+  padding: 2em;
+  height: fit-content;
+  background: $black100;
+  border-radius: 14px;
+  margin-bottom: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.trading__main__container__content__connect__wallet__card__img {
+  width: 60px;
+  margin-right: 2em;
+}
+.trading__main__container__content__connect__wallet__card__content__heading {
+  font-size: 18px;
+  text-transform: capitalize;
+  color: $white;
+  font-weight: 600;
 }
 @media (max-width: 1100px) {
   .trading__main__container__content__btc__usd__card {

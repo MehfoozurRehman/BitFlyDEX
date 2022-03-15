@@ -79,7 +79,7 @@ function BuyAndSellBtn({ selected, setSelected, title, style }) {
   );
 }
 
-function BuyAndSell() {
+function BuyAndSell({ setIsStartTrading }) {
   const [selected, setSelected] = useState("Buy");
   return (
     <div className="trading__main__container__buy__and__sell__card">
@@ -136,7 +136,16 @@ function BuyAndSell() {
           100%
         </div>
       </div>
-      <button className="trading__main__container__buy__and__sell__card__btn">
+      <button
+        onClick={() => {
+          setIsStartTrading(true);
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}
+        className="trading__main__container__buy__and__sell__card__btn"
+      >
         Connect Wallet
       </button>
     </div>
@@ -335,7 +344,7 @@ function SearchCoin() {
   );
 }
 
-export default function PoolAndTrade() {
+export default function PoolAndTrade({ setIsStartTrading }) {
   return (
     <div className="trading__main__container">
       <div className="trading__main__container__content">
@@ -399,7 +408,7 @@ export default function PoolAndTrade() {
         </div>
         <div className="trading__main__container__content__right">
           <PoolCard />
-          <BuyAndSell />
+          <BuyAndSell setIsStartTrading={setIsStartTrading} />
         </div>
       </div>
       <div className="trading__main__container__content">

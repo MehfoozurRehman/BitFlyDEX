@@ -1,5 +1,6 @@
 import React from "react";
 import Graph from "../components/Graph";
+import busdCardPic from "../assets/busdCardPic.png";
 
 function OrderBook() {
   return (
@@ -233,7 +234,22 @@ function RecentOrder() {
 
 function ConnectWallet() {
   return (
-    <div className="trading__main__container__content__connect__wallet__card"></div>
+    <div className="trading__main__container__content__connect__wallet__card">
+      <img
+        src={busdCardPic}
+        alt="busdCardPic"
+        className="trading__main__container__content__connect__wallet__card__img"
+      />
+      <div className="trading__main__container__content__connect__wallet__card__content">
+        <div className="trading__main__container__content__connect__wallet__card__content__heading">
+          Connect wallet and start trading now!
+        </div>
+
+        <button className="trading__main__container__buy__and__sell__card__btn">
+          Connect Wallet
+        </button>
+      </div>
+    </div>
   );
 }
 
@@ -487,6 +503,7 @@ export default function Trading() {
           </div>
         </div>
         <div className="trading__main__container__content__right">
+          <ConnectWallet />
           <AssetsCard />
           <AssetsCard />
         </div>

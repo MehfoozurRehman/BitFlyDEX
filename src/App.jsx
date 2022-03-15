@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -14,13 +14,18 @@ import Pools from "./screens/Pools";
 import BuyingCompetition from "./screens/ReferCompetition";
 import ReferCompetition from "./screens/ReferCompetition";
 import ReferPage from "./screens/ReferPage";
+import StartTradingPopup from "./screens/StartTradingPopup";
 import Trading from "./screens/Trading";
 import Vaults from "./screens/Vaults";
 import "./styles/export.scss";
 
 export default function App() {
+  const [isStartTrading, setIsStartTrading] = useState(false);
   return (
     <div className="app">
+      {isStartTrading ? (
+        <StartTradingPopup setIsStartTrading={setIsStartTrading} />
+      ) : null}
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -31,7 +36,10 @@ export default function App() {
         />
         <Route path="/connect-wallet" element={<ConnectWallet />} />
         <Route path="/trading" element={<Trading />} />
-        <Route path="/pool-trade" element={<PoolAndTrade />} />
+        <Route
+          path="/pool-trade"
+          element={<PoolAndTrade setIsStartTrading={setIsStartTrading} />}
+        />
         <Route path="/vaults" element={<Vaults />} />
         <Route path="/farming" element={<Farming />} />
         <Route path="/pools" element={<Pools />} />
