@@ -11,6 +11,7 @@ import NFT from "./screens/NFT";
 import NFTMarketPlace from "./screens/NFTMarketPlace";
 import PoolAndTrade from "./screens/PoolAndTrade";
 import Pools from "./screens/Pools";
+import PositionBond from "./screens/PositionBond";
 import BuyingCompetition from "./screens/ReferCompetition";
 import ReferCompetition from "./screens/ReferCompetition";
 import ReferPage from "./screens/ReferPage";
@@ -59,6 +60,7 @@ export default function App() {
         <Route path="/refer" element={<ReferPage />} />
         <Route path="/refer-competition" element={<ReferCompetition />} />
         <Route path="/buying-competition" element={<BuyingCompetition />} />
+        <Route path="/position-bond" element={<PositionBond />} />
       </Routes>
       <Footer />
     </div>

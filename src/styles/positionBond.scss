@@ -1,0 +1,114 @@
+@import "./global.scss";
+.position__bond__container {
+  width: 100%;
+  max-width: 1440px;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  margin-top: 8em;
+}
+.position__bond__container__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.position__bond__container__content__heading {
+  font-size: 30px;
+  color: $white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.position__bond__container__content__para {
+  font-size: 16px;
+  color: $WhiteGray;
+  width: 80%;
+  margin-top: 0.5em;
+}
+.position__bond__container__content__card {
+  width: 100%;
+  padding: 2em;
+  background: $black100;
+  border-radius: 14px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3em;
+}
+.position__bond__container__content__card__heading__row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  color: $white;
+}
+.position__bond__container__content__card__entry__row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  color: $white;
+  background: $black200;
+  border-radius: 14px;
+  margin-top: 1em;
+  cursor: pointer;
+}
+.position__bond__container__content__card__entry__row:hover {
+  background: $black;
+  transition: 400ms ease-in-out;
+}
+.position__bond__container__content__card__heading__row__entry {
+  font-size: 16px;
+  color: $white;
+  font-weight: 600;
+  width: 12.5%;
+}
+.position__bond__container__content__card__entry__row__entry {
+  font-size: 16px;
+  color: $white;
+  width: 12.5%;
+  display: flex;
+  flex-direction: column;
+}
+.position__bond__container__content__card__entry__row__entry span {
+  font-size: 12px;
+}
+.position__bond__container__content__card__content {
+  width: 100%;
+}
+@media (max-width: 850px) {
+  .position__bond__container__content__card__content {
+    max-width: 850px;
+    overflow-x: scroll;
+  }
+  .position__bond__container__content__card__heading__row__entry {
+    min-width: 200px !important;
+  }
+  .position__bond__container__content__card__entry__row__entry {
+    min-width: 200px !important;
+  }
+  .position__bond__container__content__card__entry__row {
+    width: fit-content;
+  }
+  .position__bond__container__content__card__content::-webkit-scrollbar {
+    width: 10px;
+    cursor: pointer;
+  }
+  .position__bond__container__content__card__content::-webkit-scrollbar-thumb {
+    background: $white;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .position__bond__container__content__card__content::-webkit-scrollbar-track {
+    background-color: $black100;
+  }
+}

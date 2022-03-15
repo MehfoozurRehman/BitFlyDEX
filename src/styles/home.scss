@@ -239,7 +239,6 @@
 .ecosystem__container__content__card__content__para {
   font-size: 16px;
   color: $white;
-
   margin: 0px auto;
   color: $white;
 }
@@ -269,6 +268,7 @@
   border-radius: 14px;
   display: flex;
   flex-direction: row-reverse;
+  border: 1px solid $black100;
   align-items: center;
   justify-content: space-between;
   margin-top: 2em;
