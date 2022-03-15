@@ -22,7 +22,7 @@ import "./styles/export.scss";
 
 export default function App() {
   const [isStartTrading, setIsStartTrading] = useState(false);
-  const [isTransferNFT, setIsTransferNFT] = useState(true);
+  const [isTransferNFT, setIsTransferNFT] = useState(false);
   return (
     <div className="app">
       {isStartTrading ? (

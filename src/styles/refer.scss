@@ -253,6 +253,29 @@
   color: $white;
   background: $black200;
 }
+.refer__jumbotron__content__terms__condition {
+  width: 100%;
+  max-width: 1000px;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 2em;
+  color: $white;
+}
+.refer__jumbotron__content__terms__condition__heading {
+  font-size: 32px;
+  color: $white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.refer__jumbotron__content__terms__condition__para {
+  font-size: 16px;
+  margin-top: 1em;
+  color: $white;
+}
 @media (max-width: 1100px) {
   .refer__jumbotron {
     flex-direction: column;
@@ -306,5 +329,8 @@
   .refer__jumbotron__content__ranking__list__card__headings__row__entry {
     width: 100%;
     margin-top: 0.3em;
+  }
+  .refer__jumbotron__content__terms__condition {
+    padding: 1em;
   }
 }
