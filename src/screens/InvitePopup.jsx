@@ -255,7 +255,7 @@ export default function InvitePopup({ setIsInvite }) {
           }}
           className="start__trading__popup__container__content__header__btn"
         >
-          <X width={20} height={20} />
+          <X width={16} height={16} />
         </button>
         <div
           style={{

@@ -292,6 +292,14 @@
   color: $white;
   font-weight: 600;
 }
+.connect__main__container__content__header__svg {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0em;
+}
+
 .connect__main__container__content__header__svg svg {
   animation: settingAnimate 1s;
 }

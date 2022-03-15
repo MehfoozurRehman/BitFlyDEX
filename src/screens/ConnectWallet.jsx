@@ -131,7 +131,7 @@ function InputBox() {
   );
 }
 
-export default function ConnectWallet() {
+export default function ConnectWallet({ setIsSetting }) {
   const [selected, setSelected] = useState("SWAP");
 
   return (
@@ -168,12 +168,18 @@ export default function ConnectWallet() {
                   Lorem Ipsum is simply dummy text of the printing
                 </div>
               </div>
-              <a
-                href="#"
+              <button
+                onClick={() => {
+                  setIsSetting(true);
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                  });
+                }}
                 className="connect__main__container__content__header__svg"
               >
                 <Settings stroke="#ffffff" width={20} height={20} />
-              </a>
+              </button>
             </div>
             <InputBox />
             <div className="connect__main__container__content__centered__svg">
@@ -287,12 +293,18 @@ export default function ConnectWallet() {
                   Lorem Ipsum is simply dummy text of the printing
                 </div>
               </div>
-              <a
-                href="#"
+              <button
+                onClick={() => {
+                  setIsSetting(true);
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                  });
+                }}
                 className="connect__main__container__content__header__svg"
               >
                 <Settings stroke="#ffffff" width={20} height={20} />
-              </a>
+              </button>
             </div>
             <InputBox />
             <div className="connect__main__container__content__centered__svg">

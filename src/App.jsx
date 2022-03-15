@@ -16,6 +16,7 @@ import PositionBond from "./screens/PositionBond";
 import BuyingCompetition from "./screens/ReferCompetition";
 import ReferCompetition from "./screens/ReferCompetition";
 import ReferPage from "./screens/ReferPage";
+import SettingPopup from "./screens/SettingPopup";
 import StartTradingPopup from "./screens/StartTradingPopup";
 import Trading from "./screens/Trading";
 import TransferNFTPopup from "./screens/TransferNFTPopup";
@@ -25,7 +26,8 @@ import "./styles/export.scss";
 export default function App() {
   const [isStartTrading, setIsStartTrading] = useState(false);
   const [isTransferNFT, setIsTransferNFT] = useState(false);
-  const [isInvite, setIsInvite] = useState(true);
+  const [isInvite, setIsInvite] = useState(false);
+  const [isSetting, setIsSetting] = useState(false);
   return (
     <div className="app">
       {isStartTrading ? (
@@ -35,6 +37,7 @@ export default function App() {
         <TransferNFTPopup setIsTransferNFT={setIsTransferNFT} />
       ) : null}
       {isInvite ? <InvitePopup setIsInvite={setIsInvite} /> : null}
+      {isSetting ? <SettingPopup setIsSetting={setIsSetting} /> : null}
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -43,7 +46,10 @@ export default function App() {
           path="/decentralized-trading"
           element={<DecentralizedTrading />}
         />
-        <Route path="/connect-wallet" element={<ConnectWallet />} />
+        <Route
+          path="/connect-wallet"
+          element={<ConnectWallet setIsSetting={setIsSetting} />}
+        />
         <Route
           path="/trading"
           element={<Trading setIsStartTrading={setIsStartTrading} />}
