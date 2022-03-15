@@ -232,7 +232,7 @@ function RecentOrder() {
   );
 }
 
-function ConnectWallet() {
+function ConnectWallet({ setIsStartTrading }) {
   return (
     <div className="trading__main__container__content__connect__wallet__card">
       <img
@@ -245,7 +245,16 @@ function ConnectWallet() {
           Connect wallet and start trading now!
         </div>
 
-        <button className="trading__main__container__buy__and__sell__card__btn">
+        <button
+          onClick={() => {
+            setIsStartTrading(true);
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}
+          className="trading__main__container__buy__and__sell__card__btn"
+        >
           Connect Wallet
         </button>
       </div>
@@ -287,7 +296,7 @@ function AssetsCard() {
   );
 }
 
-export default function Trading() {
+export default function Trading({ setIsStartTrading }) {
   return (
     <div className="trading__main__container">
       <div className="trading__main__container__content">
@@ -503,7 +512,7 @@ export default function Trading() {
           </div>
         </div>
         <div className="trading__main__container__content__right">
-          <ConnectWallet />
+          <ConnectWallet setIsStartTrading={setIsStartTrading} />
           <AssetsCard />
           <AssetsCard />
         </div>

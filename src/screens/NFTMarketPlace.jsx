@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import nftPic from "../assets/nftPic.png";
+import SelectInput from "../components/SelectInput";
 
 function NFTMarketPlaceCard() {
   return (
@@ -40,7 +41,7 @@ function NFTMarketPlaceCard() {
   );
 }
 
-function BuyAndSellBtn({ selected, setSelected, title }) {
+function BuyAndSellBtn({ selected, setSelected, title, style }) {
   return (
     <button
       onClick={() => {
@@ -51,6 +52,7 @@ function BuyAndSellBtn({ selected, setSelected, title }) {
           ? "trading__main__container__buy__and__sell__card__header__entry__heading trading__main__container__buy__and__sell__card__header__entry__input__selected"
           : "trading__main__container__buy__and__sell__card__header__entry__heading"
       }
+      style={style}
     >
       {title}
     </button>
@@ -97,6 +99,7 @@ export default function NFTMarketPlace() {
                 setSelected={setSelected}
               />
               <BuyAndSellBtn
+                style={{ color: "#7C323A" }}
                 title="Sell"
                 selected={selected}
                 setSelected={setSelected}
@@ -105,80 +108,15 @@ export default function NFTMarketPlace() {
           </div>
 
           <div className="nft__market__place__container__content__footer__right">
-            <a
-              href=""
-              className="nft__market__place__container__content__footer__right__dropdown"
-            >
-              Lorem Ipsm
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-chevron-down"
-              >
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-              <div className="nft__market__place__container__content__footer__right__dropdown__wrapper">
-                <div className="nft__market__place__container__content__footer__right__dropdown__wrapper__entry">
-                  Lorem Ipsm
-                </div>
-                <div className="nft__market__place__container__content__footer__right__dropdown__wrapper__entry">
-                  Lorem Ipsm
-                </div>
-                <div className="nft__market__place__container__content__footer__right__dropdown__wrapper__entry">
-                  Lorem Ipsm
-                </div>
-                <div className="nft__market__place__container__content__footer__right__dropdown__wrapper__entry">
-                  Lorem Ipsm
-                </div>
-                <div className="nft__market__place__container__content__footer__right__dropdown__wrapper__entry">
-                  Lorem Ipsm
-                </div>
-              </div>
-            </a>
-            <a
-              href=""
-              className="nft__market__place__container__content__footer__right__dropdown"
-            >
-              Lorem Ipsm
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-chevron-down"
-              >
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-              <div className="nft__market__place__container__content__footer__right__dropdown__wrapper">
-                <div className="nft__market__place__container__content__footer__right__dropdown__wrapper__entry">
-                  Lorem Ipsm
-                </div>
-                <div className="nft__market__place__container__content__footer__right__dropdown__wrapper__entry">
-                  Lorem Ipsm
-                </div>
-                <div className="nft__market__place__container__content__footer__right__dropdown__wrapper__entry">
-                  Lorem Ipsm
-                </div>
-                <div className="nft__market__place__container__content__footer__right__dropdown__wrapper__entry">
-                  Lorem Ipsm
-                </div>
-                <div className="nft__market__place__container__content__footer__right__dropdown__wrapper__entry">
-                  Lorem Ipsm
-                </div>
-              </div>
-            </a>
+            <SelectInput
+              style={{ marginRight: ".5em" }}
+              placeholder="lorem ipms"
+            />
+            <SelectInput
+              style={{ marginRight: ".5em" }}
+              placeholder="lorem ipms"
+            />
+
             <div
               style={{ marginTop: -6 }}
               className="footer__container__content__left__input__wrapper"

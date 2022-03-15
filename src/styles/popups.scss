@@ -24,6 +24,18 @@
   border-radius: 14px;
   position: relative;
 }
+.transfer__nft__popup__container__content {
+  width: 100%;
+  max-width: 700px;
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: $black200;
+  border-radius: 14px;
+  position: relative;
+}
 
 .start__trading__popup__container__content__header {
   width: 100%;
@@ -57,6 +69,12 @@
 .start__trading__popup__container__content__heading {
   width: 100%;
   font-size: 32px;
+  color: $white;
+  font-weight: 600;
+  margin-top: 0.5em;
+}
+.transfer__nft__popup__container__content__heading {
+  font-size: 26px;
   color: $white;
   font-weight: 600;
   margin-top: 0.5em;
@@ -126,4 +144,33 @@
   align-items: center;
   width: 50%;
   margin-top: 2em;
+}
+.transfer__nft__popup__container__content__divider {
+  width: 90%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.4);
+  margin: 1em 0em;
+  margin-bottom: 2em;
+}
+.start__trading__popup__container__content__header__input {
+  width: 100%;
+  background: $black100;
+  border-radius: 8px;
+}
+.start__trading__popup__container__content__btns__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 2em;
+}
+.start__trading__popup__container__content__btn {
+  margin-right: 1em;
+  background: transparent;
+  border: 1px solid $WhiteGray;
+  color: $white;
+}
+.start__trading__popup__container__content__btn:hover {
+  background: $white;
+  color: $black;
+  transition: 300ms ease-in-out;
 }

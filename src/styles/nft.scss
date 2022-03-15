@@ -34,11 +34,69 @@
   text-transform: uppercase;
   font-weight: 600;
 }
+.nft__container__content__left__casted__nft__card__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .nft__container__content__left__casted__nft__card__heading {
   font-size: 30px;
   color: $white;
   text-transform: uppercase;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.nft__container__content__left__casted__nft__card__btn {
+  background: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.5em;
+}
+.vaults__main__container__card__content__links__btns {
+  background: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.5em;
+}
+.nft__container__content__left__casted__nft__card__right {
+  font-size: 14px;
+  background: transparent;
+  border-radius: 6px;
+  border: 1px solid $white;
+  padding: 0.8em;
+  color: $white;
+  cursor: pointer;
+}
+.nft__container__content__left__casted__nft__card__right:hover {
+  background: $white;
+  color: $black;
+  transition: 300ms ease-in-out;
+}
+.nft__container__content__left__casted__nft__card__btn svg {
+  width: 20px;
+  height: 20px;
+}
+.vaults__main__container__card__content__links__btns svg {
+  width: 20px;
+  height: 20px;
+}
+.nft__container__content__left__casted__nft__card__btn:hover {
+  background: $black200;
+  transition: 300ms ease-in-out;
 }
 .nft__container__content__left__charactors__card__content {
   display: flex;
@@ -88,7 +146,7 @@
   min-height: 400px;
   background: $black100;
   border-radius: 14px;
-  padding: 1em;
+  padding: 2em;
   margin-top: 2em;
 }
 .nft__container__content__left__casted__nft__connect__wallet__card {
