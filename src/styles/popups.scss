@@ -174,3 +174,38 @@
   color: $black;
   transition: 300ms ease-in-out;
 }
+.connect__wallet__popup__content {
+  max-width: 500px;
+  width: 100%;
+  padding: 2em;
+  position: relative;
+  background: $black200;
+  border-radius: 14px;
+}
+.connect__wallet__popup__content__entry {
+  padding: 0.8em;
+  width: 100%;
+  background: $black100;
+  display: flex;
+  color: $white;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 0.7em;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.connect__wallet__popup__content__entry svg {
+  width: 22px;
+  height: 22px;
+  margin-right: 1em;
+}
+.connect__wallet__popup__content__btn__wrapper {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+}

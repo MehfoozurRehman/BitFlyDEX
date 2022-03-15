@@ -33,7 +33,7 @@ function ReferCard({ isBtn }) {
   );
 }
 
-export default function ReferPage() {
+export default function ReferPage({ setIsInvite }) {
   return (
     <>
       <div className="home__jumbotron">
@@ -544,12 +544,18 @@ export default function ReferPage() {
           </div>
 
           <div className="home__jumbotron__right__buttons">
-            <Link
-              to="/decentralized-trading"
+            <button
+              onClick={() => {
+                setIsInvite(true);
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }}
               className="home__jumbotron__right__buttons__button home__jumbotron__right__buttons__button__primary"
             >
               Invite Friend
-            </Link>
+            </button>
           </div>
           <div
             style={{ marginTop: 20 }}

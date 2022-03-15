@@ -7,6 +7,7 @@ import DecentralizedTrading from "./screens/DecentralizedTrading";
 import Farming from "./screens/Farming";
 import GovernanceProposals from "./screens/GovernanceProposals";
 import Home from "./screens/Home";
+import InvitePopup from "./screens/InvitePopup";
 import NFT from "./screens/NFT";
 import NFTMarketPlace from "./screens/NFTMarketPlace";
 import PoolAndTrade from "./screens/PoolAndTrade";
@@ -24,6 +25,7 @@ import "./styles/export.scss";
 export default function App() {
   const [isStartTrading, setIsStartTrading] = useState(false);
   const [isTransferNFT, setIsTransferNFT] = useState(false);
+  const [isInvite, setIsInvite] = useState(true);
   return (
     <div className="app">
       {isStartTrading ? (
@@ -32,6 +34,7 @@ export default function App() {
       {isTransferNFT ? (
         <TransferNFTPopup setIsTransferNFT={setIsTransferNFT} />
       ) : null}
+      {isInvite ? <InvitePopup setIsInvite={setIsInvite} /> : null}
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -57,7 +60,10 @@ export default function App() {
           element={<NFT setIsTransferNFT={setIsTransferNFT} />}
         />
         <Route path="/nft-market-place" element={<NFTMarketPlace />} />
-        <Route path="/refer" element={<ReferPage />} />
+        <Route
+          path="/refer"
+          element={<ReferPage setIsInvite={setIsInvite} />}
+        />
         <Route path="/refer-competition" element={<ReferCompetition />} />
         <Route path="/buying-competition" element={<BuyingCompetition />} />
         <Route path="/position-bond" element={<PositionBond />} />
