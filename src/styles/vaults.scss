@@ -187,7 +187,7 @@
 .vaults__main__container__content__card__suub__card__content__svg__content {
   position: absolute;
   top: 20;
-  left: 0;
+  right: 0;
   width: fit-content;
   min-width: 200px;
   color: $white;
@@ -398,6 +398,7 @@
 .vaults__main__container__card__content__links {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 .vaults__main__container__card__content__links__heading {
   font-size: 16px;
@@ -481,7 +482,8 @@
   }
   .vaults__main__container__content__card {
     width: 100%;
-    margin: 0px !important;
+    margin-bottom: 2em;
+    margin-right: 0em !important;
   }
   .stack__calculation__container__card__input__container__row {
     flex-direction: column;
@@ -492,5 +494,10 @@
   }
   .vaults__main__container__card {
     padding: 2em;
+  }
+}
+@media (max-width: 500px) {
+  .vaults__main__container__content__card__suub__card__img {
+    width: 50px;
   }
 }

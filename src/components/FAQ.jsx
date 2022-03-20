@@ -32,7 +32,7 @@ export default function FAQ() {
                 <polyline points="18 15 12 9 6 15"></polyline>
               </svg>
             </div>
-            <div className="faq__section__content__card__paragraph animate__animated  animate__fadeInDown">
+            <div className="faq__section__content__card__paragraph animate__animated  animate__fadeIn">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
               enim eius earum animi exercitationem deleniti amet, quis nam
               ratione ex aspernatur placeat? Excepturi repudiandae adipisci vel
