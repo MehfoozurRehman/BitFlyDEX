@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import ComfirmOTP from "./screens/ComfirmOTP";
 import ConnectWallet from "./screens/ConnectWallet";
 import DecentralizedProtocol from "./screens/DecentralizedProtocol";
 import DecentralizedTrading from "./screens/DecentralizedTrading";
@@ -12,12 +13,14 @@ import Home from "./screens/Home";
 import InvitePopup from "./screens/InvitePopup";
 import NFT from "./screens/NFT";
 import NFTMarketPlace from "./screens/NFTMarketPlace";
+import OTPPopup from "./screens/OTPPopup";
 import PoolAndTrade from "./screens/PoolAndTrade";
 import Pools from "./screens/Pools";
 import PositionBond from "./screens/PositionBond";
 import BuyingCompetition from "./screens/ReferCompetition";
 import ReferCompetition from "./screens/ReferCompetition";
 import ReferPage from "./screens/ReferPage";
+import ResetPassword from "./screens/ResetPassword";
 import SettingPopup from "./screens/SettingPopup";
 import StartTradingPopup from "./screens/StartTradingPopup";
 import Trading from "./screens/Trading";
@@ -31,6 +34,9 @@ export default function App() {
   const [isTransferNFT, setIsTransferNFT] = useState(false);
   const [isInvite, setIsInvite] = useState(false);
   const [isSetting, setIsSetting] = useState(false);
+  const [isOTP, setIsOTP] = useState(false);
+  const [isRestPassword, setIsResetPassword] = useState(false);
+  const [isConfirmOTP, setIsConfirmOTP] = useState(false);
   return (
     <div className="app">
       {isStartTrading ? (
@@ -41,6 +47,13 @@ export default function App() {
       ) : null}
       {isInvite ? <InvitePopup setIsInvite={setIsInvite} /> : null}
       {isSetting ? <SettingPopup setIsSetting={setIsSetting} /> : null}
+      {isOTP ? (
+        <OTPPopup setIsOTP={setIsOTP} setIsResetPassword={setIsResetPassword} />
+      ) : null}
+      {isRestPassword ? (
+        <ResetPassword setIsResetPassword={setIsResetPassword} />
+      ) : null}
+      {isConfirmOTP ? <ComfirmOTP setIsConfirmOTP={setIsConfirmOTP} /> : null}
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -83,7 +96,9 @@ export default function App() {
         <Route path="/update-reward" element={<UpdateReward />} />
         <Route
           path="/get-started"
-          element={<GetStarted isSetting={isSetting} />}
+          element={
+            <GetStarted setIsConfirmOTP={setIsConfirmOTP} setIsOTP={setIsOTP} />
+          }
         />
       </Routes>
       <Footer />

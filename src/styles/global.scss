@@ -92,7 +92,10 @@ input:-webkit-autofill:active {
   background-color: $white;
   color: $black;
   border: none;
-  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 0.5rem;
   width: 50%;
   font-size: 16px;
@@ -120,4 +123,67 @@ input:-webkit-autofill:active {
   border: none;
   cursor: pointer;
   font-size: 16px;
+}
+.login__form__popup {
+  width: 100%;
+  height: fit-content;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(0, 0, 0, 0.8);
+  z-index: 9999;
+}
+.login__form__popup__content {
+  width: 100%;
+  max-width: 800px;
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: $black100;
+  border-radius: 14px;
+  position: relative;
+}
+.login__form__popup__content__header__btn {
+  background: $black200;
+  border: none;
+  outline: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  color: $white;
+  cursor: pointer;
+  padding: 0em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login__form__popup__content__header__btn:hover {
+  background: $black;
+  transition: 400ms ease-in-out;
+  color: red;
+}
+.get__started__form__popup {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.login__form__popup__content__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.get__started__form__popup__heading {
+  font-size: 20px;
+  color: $white;
+  text-transform: uppercase;
+  font-weight: 600;
 }
