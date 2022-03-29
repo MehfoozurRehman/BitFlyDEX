@@ -40,9 +40,13 @@ export default function ComfirmOTP({ setIsConfirmOTP }) {
             </span>
           </div>
           <Link
-            to="/"
+            to="/wallet"
             onClick={() => {
               setIsConfirmOTP(false);
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
             }}
             className="get__started__form__btn"
           >

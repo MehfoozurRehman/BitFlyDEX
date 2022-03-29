@@ -27,6 +27,7 @@ import Trading from "./screens/Trading";
 import TransferNFTPopup from "./screens/TransferNFTPopup";
 import UpdateReward from "./screens/UpdateReward";
 import Vaults from "./screens/Vaults";
+import Wallet from "./screens/Wallet";
 import "./styles/export.scss";
 
 export default function App() {
@@ -100,6 +101,7 @@ export default function App() {
             <GetStarted setIsConfirmOTP={setIsConfirmOTP} setIsOTP={setIsOTP} />
           }
         />
+        <Route path="/wallet" element={<Wallet />} />
       </Routes>
       <Footer />
     </div>

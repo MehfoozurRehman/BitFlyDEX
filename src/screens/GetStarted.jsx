@@ -68,7 +68,18 @@ export default function GetStarted({ setIsOTP, setIsConfirmOTP }) {
               >
                 Forgot password?
               </button>
-              <button className="get__started__form__btn">Login</button>
+              <Link
+                to="/wallet"
+                onClick={() => {
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                  });
+                }}
+                className="get__started__form__btn"
+              >
+                Login
+              </Link>
               <div className="get__started__form__already__acount">
                 <div className="get__started__form__already__acount__para">
                   Don't have an account?{" "}
