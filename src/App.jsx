@@ -6,6 +6,7 @@ import ConnectWallet from "./screens/ConnectWallet";
 import DecentralizedProtocol from "./screens/DecentralizedProtocol";
 import DecentralizedTrading from "./screens/DecentralizedTrading";
 import Farming from "./screens/Farming";
+import GetStarted from "./screens/GetStarted";
 import GovernanceProposals from "./screens/GovernanceProposals";
 import Home from "./screens/Home";
 import InvitePopup from "./screens/InvitePopup";
@@ -80,6 +81,10 @@ export default function App() {
           element={<DecentralizedProtocol setIsSetting={setIsSetting} />}
         />
         <Route path="/update-reward" element={<UpdateReward />} />
+        <Route
+          path="/get-started"
+          element={<GetStarted isSetting={isSetting} />}
+        />
       </Routes>
       <Footer />
     </div>

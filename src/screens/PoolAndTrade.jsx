@@ -413,40 +413,42 @@ export default function PoolAndTrade({ setIsStartTrading }) {
       </div>
       <div className="trading__main__container__content">
         <div className="trading__main__container__content__btc__usd__card ">
-          <div className="trading__main__container__content__btc__usd__card__content__heading">
-            Trade
+          <div className="trading__main__container__content__btc__usd__card__content__wrapper">
+            <div className="trading__main__container__content__btc__usd__card__content__heading">
+              Trade
+            </div>
+            <div className="trading__main__container__content__btc__usd__card__headings__row">
+              <div className="trading__main__container__content__btc__usd__card__headings__row__entry">
+                ACTIONS
+              </div>
+              <div className="trading__main__container__content__btc__usd__card__headings__row__entry">
+                TOKENS
+              </div>
+              <div className="trading__main__container__content__btc__usd__card__headings__row__entry">
+                Size
+              </div>
+              <div className="trading__main__container__content__btc__usd__card__headings__row__entry">
+                Price
+              </div>
+              <div className="trading__main__container__content__btc__usd__card__headings__row__entry">
+                Time
+              </div>
+              <div className="trading__main__container__content__btc__usd__card__headings__row__entry">
+                Tx
+              </div>
+            </div>
+            <TradeCardData />
+            <TradeCardData />
+            <TradeCardData />
+            <TradeCardData />
+            <TradeCardData />
+            <TradeCardData />
+            <TradeCardData />
+            <TradeCardData />
+            <TradeCardData />
+            <TradeCardData />
+            <TradeCardData />
           </div>
-          <div className="trading__main__container__content__btc__usd__card__headings__row">
-            <div className="trading__main__container__content__btc__usd__card__headings__row__entry">
-              ACTIONS
-            </div>
-            <div className="trading__main__container__content__btc__usd__card__headings__row__entry">
-              TOKENS
-            </div>
-            <div className="trading__main__container__content__btc__usd__card__headings__row__entry">
-              Size
-            </div>
-            <div className="trading__main__container__content__btc__usd__card__headings__row__entry">
-              Price
-            </div>
-            <div className="trading__main__container__content__btc__usd__card__headings__row__entry">
-              Time
-            </div>
-            <div className="trading__main__container__content__btc__usd__card__headings__row__entry">
-              Tx
-            </div>
-          </div>
-          <TradeCardData />
-          <TradeCardData />
-          <TradeCardData />
-          <TradeCardData />
-          <TradeCardData />
-          <TradeCardData />
-          <TradeCardData />
-          <TradeCardData />
-          <TradeCardData />
-          <TradeCardData />
-          <TradeCardData />
         </div>
         <div className="trading__main__container__content__right">
           <AssetsCard />

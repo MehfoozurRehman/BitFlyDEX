@@ -348,7 +348,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   text-align: center;
   margin-top: 1em;
 }
@@ -356,7 +355,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   text-align: center;
   margin-top: 1em;
 }
@@ -440,5 +438,30 @@
   .trading__main__container__content__btc__usd__card__nav {
     width: 100%;
     margin-top: 1em;
+  }
+  .trading__main__container__content__btc__usd__card__headings__row {
+    width: 100%;
+  }
+  .trading__main__container__content__btc__usd__card__headings__row__entry {
+    min-width: 130px !important;
+  }
+  .trading__main__container__content__btc__usd__card__row__entry {
+    min-width: 130px !important;
+  }
+  .trading__main__container__content__btc__usd__card__content__wrapper {
+    max-width: 850px;
+    overflow-x: scroll;
+  }
+  .trading__main__container__content__btc__usd__card__content__wrapper::-webkit-scrollbar {
+    width: 10px;
+    cursor: pointer;
+  }
+  .trading__main__container__content__btc__usd__card__content__wrapper::-webkit-scrollbar-thumb {
+    background: $white;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .trading__main__container__content__btc__usd__card__content__wrapper::-webkit-scrollbar-track {
+    background-color: $black100;
   }
 }

@@ -131,13 +131,13 @@ function InputBox() {
   );
 }
 
-export default function ConnectWallet({ setIsSetting }) {
-  const [selected, setSelected] = useState("SWAP");
+export default function GetStarted({ setIsSetting }) {
+  const [selected, setSelected] = useState("Login");
 
   return (
     <div className="connect__main__container">
       <div className="connect__wallet__jumbotron__wrapper">
-        <h1 className="governance__jumbotron__heading">Swap</h1>
+        <h1 className="governance__jumbotron__heading">Lets get Started</h1>
         <div className="governance__jumbotron__para">
           On-chain governance is a system for managing and implementing changes
           to cryptocurrency blockchains. In this type of governance, rules for
@@ -149,15 +149,19 @@ export default function ConnectWallet({ setIsSetting }) {
       </div>
       <div className="connect__main__container__content">
         <div className="connect__main__container__content__nav__wrapper">
-          <NavLink title="SWAP" selected={selected} setSelected={setSelected} />
           <NavLink
-            title="LIQUIDITY"
+            title="Login"
+            selected={selected}
+            setSelected={setSelected}
+          />
+          <NavLink
+            title="Create account"
             selected={selected}
             setSelected={setSelected}
           />
         </div>
         <form className="connect__main__container__content__divider"></form>
-        {selected === "SWAP" ? (
+        {selected === "Login" ? (
           <>
             <div className="connect__main__container__content__header">
               <div className="connect__main__container__content__header__heading__wrapper">
@@ -282,7 +286,7 @@ export default function ConnectWallet({ setIsSetting }) {
             </div>
           </>
         ) : null}
-        {selected === "LIQUIDITY" ? (
+        {selected === "Create account" ? (
           <>
             <div className="connect__main__container__content__header">
               <div className="connect__main__container__content__header__heading__wrapper">
