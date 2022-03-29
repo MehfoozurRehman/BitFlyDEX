@@ -84,23 +84,18 @@ export default function Header() {
       {isNavOpen ? (
         <div className="header__nav">
           <NavLink title="Home" to="/" />
-          <NavLink title="IDO" to="/governance-proposals" />
+
           <NavLink
-            title="Earn"
-            to="/pool-trade"
+            title="IDO"
+            to="/governance-proposals"
             list={[
               {
-                title: "LOREM IPSUM",
+                title: "BITFLY IDO",
                 info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
                 to: "/",
               },
               {
-                title: "LOREM IPSUM",
-                info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-                to: "/",
-              },
-              {
-                title: "LOREM IPSUM",
+                title: "IDO LAUNCHPAD",
                 info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
                 to: "/",
               },
@@ -117,21 +112,67 @@ export default function Header() {
             ]}
           />
           <NavLink
+            title="Earn"
+            to="/pool-trade"
+            list={[
+              {
+                title: "STAKING",
+                info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
+                to: "/",
+              },
+              {
+                title: "FARMING",
+                info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
+                to: "/",
+              },
+              {
+                title: "BONDS",
+                info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
+                to: "/",
+              },
+              {
+                title: "FIXED DEPOSIT",
+                info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
+                to: "/",
+              },
+              {
+                title: "VAULTS",
+                info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
+                to: "/",
+              },
+              {
+                title: "REFERRAL",
+                info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
+                to: "/",
+              },
+              {
+                title: "LOREM IPSUM",
+                info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
+                to: "/",
+              },
+            ]}
+          />
+          <NavLink
             title="Trade"
             to="/trading"
             list={[
               {
-                title: "LOREM IPSUM",
+                title: "SWAP",
                 info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
                 to: "/",
               },
               {
-                title: "LOREM IPSUM",
+                title: "POOL",
                 info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
                 to: "/",
               },
               {
-                title: "LOREM IPSUM",
+                title: "EXCHANGE",
+                info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
+                to: "/",
+              },
+              {
+                title: "EXCHANGE PRO",
                 info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
                 to: "/",
               },
@@ -152,17 +193,12 @@ export default function Header() {
             to="/nft"
             list={[
               {
-                title: "LOREM IPSUM",
+                title: "NFTs",
                 info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
                 to: "/",
               },
               {
-                title: "LOREM IPSUM",
-                info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-                to: "/",
-              },
-              {
-                title: "LOREM IPSUM",
+                title: "NFT MARKETPLACE",
                 info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
                 to: "/",
               },
@@ -183,22 +219,17 @@ export default function Header() {
             to="/farming"
             list={[
               {
-                title: "LOREM IPSUM",
+                title: "GOVERNANCE",
                 info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
                 to: "/",
               },
               {
-                title: "LOREM IPSUM",
+                title: "DOCUMENTATION",
                 info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
                 to: "/",
               },
               {
-                title: "LOREM IPSUM",
-                info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-                to: "/",
-              },
-              {
-                title: "LOREM IPSUM",
+                title: "WHITE PAPER",
                 info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
                 to: "/",
               },
