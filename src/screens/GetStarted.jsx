@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Settings } from "react-feather";
+import { Link } from "react-router-dom";
+import AuthInput from "../components/AuthInput";
 
 function NavLink({ title, selected, setSelected }) {
   return (
@@ -163,216 +165,61 @@ export default function GetStarted({ setIsSetting }) {
         <form className="connect__main__container__content__divider"></form>
         {selected === "Login" ? (
           <>
-            <div className="connect__main__container__content__header">
-              <div className="connect__main__container__content__header__heading__wrapper">
-                <div className="connect__main__container__content__header__heading">
-                  Exchange
-                </div>
-                <div className="connect__main__container__content__header__para">
-                  Lorem Ipsum is simply dummy text of the printing
-                </div>
-              </div>
-              <button
-                onClick={() => {
-                  setIsSetting(true);
-                  window.scrollTo({
-                    top: 0,
-                    behavior: "smooth",
-                  });
-                }}
-                className="connect__main__container__content__header__svg"
-              >
-                <Settings stroke="#ffffff" width={20} height={20} />
+            <form action="" className="get__started__form">
+              <AuthInput placeholder="Enter email Id" type="email" />
+              <AuthInput placeholder="Password" type="password" />
+              <button className="get__started__form__forgot__password">
+                Forgot password?
               </button>
-            </div>
-            <InputBox />
-            <div className="connect__main__container__content__centered__svg">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24.469"
-                height="31.5"
-                viewBox="0 0 24.469 31.5"
-              >
-                <path
-                  id="Icon_ionic-md-swap"
-                  data-name="Icon ionic-md-swap"
-                  d="M9.232,16.249l-6.982,7,6.982,6.989V24.989H21.5V21.495H9.232ZM33.75,12.755,26.768,5.766v5.245H14.5v3.495h12.27v5.245Z"
-                  transform="translate(30.234 -2.25) rotate(90)"
-                  fill="#fff"
-                />
-              </svg>
-            </div>
-            <InputBox />
-            <div className="connect__main__container__content__price__wrapper">
-              <div className="connect__main__container__content__price__wrapper__left">
-                Price <span>0.0052154 BNB</span> per <span>BITFLY</span>
-              </div>
-              <a
-                href="#"
-                className="connect__main__container__content__price__wrapper__right"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="23.972"
-                  height="23.881"
-                  viewBox="0 0 23.972 23.881"
-                >
-                  <g id="loop" transform="translate(-3.999 -4.06)">
-                    <path
-                      id="Path_616"
-                      data-name="Path 616"
-                      d="M16.5,15.955a1.5,1.5,0,0,1-1.064-2.562l3.446-3.431L15.437,6.532A1.5,1.5,0,0,1,17.55,4.42l4.494,4.494a1.5,1.5,0,0,1,0,2.112L17.55,15.521A1.5,1.5,0,0,1,16.5,15.955Z"
-                      transform="translate(5.477 0)"
-                      fill="#fff"
-                    />
-                    <path
-                      id="Path_617"
-                      data-name="Path 617"
-                      d="M5.5,14.491a1.5,1.5,0,0,1-1.5-1.5v-1.5A4.494,4.494,0,0,1,8.495,7H26.472a1.5,1.5,0,0,1,0,3H8.495a1.5,1.5,0,0,0-1.5,1.5v1.5A1.5,1.5,0,0,1,5.5,14.491ZM9.993,26.476a1.5,1.5,0,0,1-1.064-.434L4.435,21.547a1.5,1.5,0,0,1,0-2.112L8.929,14.94a1.5,1.5,0,0,1,2.112,2.112L7.611,20.483l3.431,3.431a1.5,1.5,0,0,1-1.049,2.562Z"
-                      transform="translate(0 1.465)"
-                      fill="#fff"
-                    />
-                    <path
-                      id="Path_618"
-                      data-name="Path 618"
-                      d="M23.476,19.491H5.5a1.5,1.5,0,1,1,0-3H23.476a1.5,1.5,0,0,0,1.5-1.5V13.5a1.5,1.5,0,0,1,3,0V15A4.494,4.494,0,0,1,23.476,19.491Z"
-                      transform="translate(0 3.955)"
-                      fill="#fff"
-                    />
-                  </g>
-                </svg>
-              </a>
-            </div>
-            <button className="connect__main__container__content__btn">
-              Connect Wallet
-            </button>
-            <div
-              style={{ marginTop: "3em" }}
-              className="connect__main__container__content__divider"
-            ></div>
-            <div className="connect__main__container__content__bottom">
-              <div className="connect__main__container__content__bottom__content">
-                <div className="connect__main__container__content__bottom__content__left">
-                  Minimum Received
-                </div>
-                <div className="connect__main__container__content__bottom__content__right">
-                  187.9 BITFLY
+              <button className="get__started__form__btn">Login</button>
+              <div className="get__started__form__already__acount">
+                <div className="get__started__form__already__acount__para">
+                  Don't have an account?{" "}
+                  <button
+                    onClick={() => {
+                      setSelected("Create account");
+                      window.scrollTo({
+                        top: 0,
+                        behavior: "smooth",
+                      });
+                    }}
+                    className="get__started__form__already__acount__btn"
+                  >
+                    Create Account
+                  </button>
                 </div>
               </div>
-              <div className="connect__main__container__content__bottom__content">
-                <div className="connect__main__container__content__bottom__content__left">
-                  Price Impact
-                </div>
-                <div className="connect__main__container__content__bottom__content__right">
-                  0.10%
-                </div>
-              </div>
-              <div className="connect__main__container__content__bottom__content">
-                <div className="connect__main__container__content__bottom__content__left">
-                  Liquidity Provider Fee
-                </div>
-                <div className="connect__main__container__content__bottom__content__right">
-                  0.003996 BNB
-                </div>
-              </div>
-              <div className="connect__main__container__content__bottom__content">
-                <div className="connect__main__container__content__bottom__content__left">
-                  RFI
-                </div>
-                <div className="connect__main__container__content__bottom__content__right">
-                  1%
-                </div>
-              </div>
-            </div>
+            </form>
           </>
         ) : null}
         {selected === "Create account" ? (
           <>
-            <div className="connect__main__container__content__header">
-              <div className="connect__main__container__content__header__heading__wrapper">
-                <div className="connect__main__container__content__header__heading">
-                  Liquidity
-                </div>
-                <div className="connect__main__container__content__header__para">
-                  Lorem Ipsum is simply dummy text of the printing
-                </div>
-              </div>
-              <button
-                onClick={() => {
-                  setIsSetting(true);
-                  window.scrollTo({
-                    top: 0,
-                    behavior: "smooth",
-                  });
-                }}
-                className="connect__main__container__content__header__svg"
-              >
-                <Settings stroke="#ffffff" width={20} height={20} />
-              </button>
-            </div>
-            <InputBox />
-            <div className="connect__main__container__content__centered__svg">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-plus"
-              >
-                <line x1="12" y1="5" x2="12" y2="19"></line>
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-              </svg>
-            </div>
-            <InputBox />
-            <div className="connect__main__container__content__price__wrapper">
-              <div className="connect__main__container__content__bottom__content__left">
-                Price and Pool Share
-              </div>
-            </div>
-            <div className="connect__main__container__content__price__wrapper">
-              <div className="connect__main__container__content__price__wrapper__card">
-                <div className="connect__main__container__content__price__wrapper__card__para">
-                  0.003996 BNB
-                </div>
-                <div className="connect__main__container__content__price__wrapper__card__heading">
-                  BNB per BITFLY
-                </div>
-              </div>
-              <div className="connect__main__container__content__price__wrapper__card">
-                <div className="connect__main__container__content__price__wrapper__card__para">
-                  192.265
-                </div>
-                <div className="connect__main__container__content__price__wrapper__card__heading">
-                  BNB per BITFLY
-                </div>
-              </div>
-              <div className="connect__main__container__content__price__wrapper__card">
-                <div className="connect__main__container__content__price__wrapper__card__para">
-                  0%
-                </div>
-                <div className="connect__main__container__content__price__wrapper__card__heading">
-                  Share of Pool
-                </div>
-              </div>
-            </div>
+            <form action="" className="get__started__form">
+              <AuthInput placeholder="Enter email Id" type="email" />
+              <AuthInput placeholder="Password" type="password" />
+              <AuthInput placeholder="Confirm Password" type="password" />
 
-            <button className="connect__main__container__content__btn">
-              Connect Wallet
-            </button>
-            <div
-              style={{ marginTop: "3em" }}
-              className="connect__main__container__content__divider"
-            ></div>
-            <div className="connect__main__container__content__bottom">
-              <div className="connect__main__container__content__bottom__content__left">
-                LP Tokens in your wallet
+              <button className="get__started__form__btn">
+                Create Account
+              </button>
+              <div className="get__started__form__already__acount">
+                <div className="get__started__form__already__acount__para">
+                  Don't have an account?{" "}
+                  <button
+                    onClick={() => {
+                      setSelected("Login");
+                      window.scrollTo({
+                        top: 0,
+                        behavior: "smooth",
+                      });
+                    }}
+                    className="get__started__form__already__acount__btn"
+                  >
+                    Login
+                  </button>
+                </div>
               </div>
-            </div>
+            </form>
           </>
         ) : null}
       </div>
