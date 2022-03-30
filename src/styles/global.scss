@@ -194,3 +194,117 @@ input:-webkit-autofill:active {
   text-transform: uppercase;
   font-weight: 600;
 }
+.wallet__form__balance {
+  font-size: 24px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.wallet__form__balance span {
+  font-size: 16px;
+  color: $WhiteGray;
+  text-transform: capitalize;
+  margin-bottom: 0.3em;
+}
+.wallet__form__balance__headings__row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3em;
+}
+.wallet__form__balance__headings__row__entry {
+  font-size: 16px;
+  color: $WhiteGray;
+}
+.wallet__form__balance__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wallet__form__balance__content__card {
+  width: 100%;
+  background: $black200;
+  padding: 1.5em;
+  border-radius: 14px;
+  margin-top: 1em;
+}
+.wallet__form__balance__content__card__entry__title {
+  display: flex;
+  font-size: 20px;
+  color: $white;
+  text-transform: uppercase;
+  font-weight: 600;
+  align-items: center;
+}
+.wallet__form__balance__content__card__entry__title svg {
+  width: 24px;
+  height: 24px;
+  margin-left: 0.5em;
+}
+.wallet__form__balance__content__card__entry__para {
+  font-size: 16px;
+  color: $WhiteGray;
+  display: flex;
+  align-items: center;
+}
+.wallet__form__balance__content__card__entry__para svg {
+  width: 18px;
+  height: 18px;
+  margin-left: 0.5em;
+}
+.wallet__from__balance__content__card__upper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wallet__from__balance__content__card__bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5em;
+}
+.wallet__from__balance__content__card__btn {
+  background: transparent;
+  padding: 0.6em 1em;
+  border-radius: 8px;
+  border: 1px solid $white;
+  color: $white;
+  cursor: pointer;
+  font-size: 15px;
+  margin-left: 1em;
+}
+.wallet__from__balance__content__card__btn:hover {
+  background: $white;
+  color: $black;
+  border-color: $white;
+  transition: 300ms ease-in-out;
+}
+@media (max-width: 600px) {
+  .wallet__from__balance__content__card__upper {
+    flex-direction: column;
+  }
+  .wallet__form__balance__content__card__entry {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1em;
+  }
+  .wallet__form__balance__content__card__entry__para {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: flex;
+    flex-direction: column;
+  }
+  .wallet__form__balance__content__card__entry__para svg {
+    margin-top: 0.5em;
+  }
+}
