@@ -6,6 +6,7 @@ import ComfirmOTP from "./screens/ComfirmOTP";
 import ConnectWallet from "./screens/ConnectWallet";
 import DecentralizedProtocol from "./screens/DecentralizedProtocol";
 import DecentralizedTrading from "./screens/DecentralizedTrading";
+import Docs from "./screens/Docs";
 import ExchangeLanding from "./screens/ExchangeLanding";
 import ExchangeProLanding from "./screens/ExchangeProLanding";
 import Farming from "./screens/Farming";
@@ -42,6 +43,7 @@ export default function App() {
   const [isOTP, setIsOTP] = useState(false);
   const [isRestPassword, setIsResetPassword] = useState(false);
   const [isConfirmOTP, setIsConfirmOTP] = useState(false);
+  const [isDocs, setIsDocs] = useState(false);
   return (
     <div className="app">
       {isStartTrading ? (
@@ -59,7 +61,7 @@ export default function App() {
         <ResetPassword setIsResetPassword={setIsResetPassword} />
       ) : null}
       {isConfirmOTP ? <ComfirmOTP setIsConfirmOTP={setIsConfirmOTP} /> : null}
-      <Header />
+      {isDocs ? null : <Header />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/governance-proposals" element={<GovernanceProposals />} />
@@ -110,8 +112,9 @@ export default function App() {
         <Route path="/pool-landing" element={<PoolLanding />} />
         <Route path="/exchange-landing" element={<ExchangeLanding />} />
         <Route path="/exchange-pro-landing" element={<ExchangeProLanding />} />
+        <Route path="/docs" element={<Docs setIsDocs={setIsDocs} />} />
       </Routes>
-      <Footer />
+      {isDocs ? null : <Footer />}
     </div>
   );
 }
