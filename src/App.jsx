@@ -6,6 +6,8 @@ import ComfirmOTP from "./screens/ComfirmOTP";
 import ConnectWallet from "./screens/ConnectWallet";
 import DecentralizedProtocol from "./screens/DecentralizedProtocol";
 import DecentralizedTrading from "./screens/DecentralizedTrading";
+import ExchangeLanding from "./screens/ExchangeLanding";
+import ExchangeProLanding from "./screens/ExchangeProLanding";
 import Farming from "./screens/Farming";
 import GetStarted from "./screens/GetStarted";
 import GovernanceProposals from "./screens/GovernanceProposals";
@@ -15,6 +17,7 @@ import NFT from "./screens/NFT";
 import NFTMarketPlace from "./screens/NFTMarketPlace";
 import OTPPopup from "./screens/OTPPopup";
 import PoolAndTrade from "./screens/PoolAndTrade";
+import PoolLanding from "./screens/PoolLanding";
 import Pools from "./screens/Pools";
 import PositionBond from "./screens/PositionBond";
 import BuyingCompetition from "./screens/ReferCompetition";
@@ -23,6 +26,7 @@ import ReferPage from "./screens/ReferPage";
 import ResetPassword from "./screens/ResetPassword";
 import SettingPopup from "./screens/SettingPopup";
 import StartTradingPopup from "./screens/StartTradingPopup";
+import SwapLanding from "./screens/SwapLanding";
 import Trading from "./screens/Trading";
 import TransferNFTPopup from "./screens/TransferNFTPopup";
 import UpdateReward from "./screens/UpdateReward";
@@ -102,6 +106,10 @@ export default function App() {
           }
         />
         <Route path="/wallet" element={<Wallet />} />
+        <Route path="/swap-landing" element={<SwapLanding />} />
+        <Route path="/pool-landing" element={<PoolLanding />} />
+        <Route path="/exchange-landing" element={<ExchangeLanding />} />
+        <Route path="/exchange-pro-landing" element={<ExchangeProLanding />} />
       </Routes>
       <Footer />
     </div>

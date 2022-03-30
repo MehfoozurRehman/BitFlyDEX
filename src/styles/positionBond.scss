@@ -30,6 +30,13 @@
   width: 80%;
   margin-top: 0.5em;
 }
+.position__bond__container__content__para__landing {
+  font-size: 16px;
+  color: $WhiteGray;
+  width: 80%;
+  margin-top: 0.5em;
+  margin-bottom: 3em;
+}
 .position__bond__container__content__card {
   width: 100%;
   padding: 2em;
@@ -110,5 +117,10 @@
   }
   .position__bond__container__content__card__content::-webkit-scrollbar-track {
     background-color: $black100;
+  }
+  .position__bond__container__content__para,
+  .position__bond__container__content__para__landing {
+    text-align: center;
+    width: 100%;
   }
 }
