@@ -8,17 +8,190 @@
 .docs__container__wrapper {
   display: flex;
   width: 100%;
-  background-color: aquamarine;
 }
 .docs__container__wrapper__sidebar {
-  width: 25%;
-  height: fit-content;
-  min-height: 100vh;
+  max-width: 350px;
+  width: 100%;
+  height: 100vh;
   background: $black;
+  overflow-y: auto;
+  position: sticky;
+  top: 0;
+}
+.docs__container__wrapper__sidebar::-webkit-scrollbar {
+  width: 15px;
+}
+.docs__container__wrapper__sidebar::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 50px;
+  border: 3px solid black;
+}
+.docs__container__wrapper__sidebar::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 .docs__container__wrapper__content {
   flex: 1;
   height: fit-content;
   min-height: 100vh;
   background-color: $white;
+  padding: 2em;
+}
+.docs__container__wrapper__content__heading {
+  font-size: 30px;
+  color: $black200;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.docs__content__section__heading {
+  font-size: 24px;
+  color: $black200;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 2em;
+}
+.docs__container__wrapper__content__divider {
+  width: 100%;
+  height: 1px;
+  background: rgb(0, 0, 0, 0.2);
+  margin: 1em 0em;
+}
+.docs__container__wrapper__content__img__wrapper {
+  width: 100%;
+  height: 300px;
+  margin: 2em 0em;
+}
+.docs__container__wrapper__content__img__wrapper__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.docs__content__section__para {
+  font-size: 15px;
+  color: $black200;
+  margin-top: 1.5em;
+}
+.docs__container__wrapper__content__btn__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2em;
+}
+.docs__container__wrapper__content__btn {
+  color: $black200;
+  background: transparent;
+  border: 1px solid rgb(0, 0, 0, 0.2);
+  padding: 1em 3em;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+}
+.docs__container__wrapper__content__btn svg {
+  width: 20px;
+  height: 20px;
+}
+.docs__container__wrapper__content__btn:hover {
+  border: 1px solid rgb(0, 0, 0, 0.5);
+  transition: 300ms ease-in-out;
+}
+.docs__container__wrapper__content__btn__heading {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin: 0em 1em;
+  font-size: 16px;
+  font-weight: 600;
+  color: $black200;
+}
+.docs__container__wrapper__content__btn__heading span {
+  font-size: 13px;
+  color: rgb(0, 0, 0, 0.7);
+}
+.docs__container__wrapper__content__footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2em;
+}
+.docs__container__wrapper__content__footer__entry {
+  font-size: 14px;
+  color: rgb(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+}
+.docs__container__wrapper__content__footer__entry svg {
+  width: 22px;
+  height: 22px;
+  margin-left: 1em;
+}
+.docs__container__wrapper__content__footer__entry svg:hover {
+  stroke: black;
+  transition: 300ms ease-in-out;
+}
+.docs__container__wrapper__sidebar {
+  padding: 2em 1em;
+}
+.docs__container__wrapper__sidebar__btn {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: $white;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.6em;
+  cursor: pointer;
+  padding: 0;
+}
+.docs__container__wrapper__sidebar__btn__title {
+  color: $white;
+}
+.docs__container__wrapper__sidebar__btn__svg svg {
+  width: 20px;
+  height: 20px;
+}
+.docs__container__wrapper__sidebar__btn__svg {
+  animation: animatedSvgReverse 300ms linear;
+}
+.docs__container__wrapper__sidebar__btn__svg__animated svg {
+  width: 20px;
+  height: 20px;
+}
+.docs__container__wrapper__sidebar__btn__svg__animated {
+  transform: rotate(90deg);
+  animation: animatedSvg 300ms linear;
+}
+@keyframes animatedSvg {
+  0% {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
+@keyframes animatedSvgReverse {
+  0% {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.docs__container__wrapper__sidebar__btn__expand {
+  background: transparent;
+  border: none;
+  color: $WhiteGray;
+  margin-top: 0.7em;
+  padding: 0;
+  font-size: 15px;
+  cursor: pointer;
+}
+@media (max-width: 1440px) {
+  .docs__container__wrapper__sidebar {
+    max-width: 300px;
+  }
 }
