@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import docsPic from "../assets/docsPic.jpg";
+import logo from "../assets/logo.png";
 
 function DocsContentSection() {
   return (
@@ -43,107 +44,320 @@ function DocsContentSection() {
   );
 }
 
-function SideBarLink({ index }) {
-  const [isOpen, setIsOpen] = useState(1);
-  console.log(isOpen);
+function SideBarLink({ title }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const SideBarExpandEntry = [
+    {
+      title: "Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem iamet",
+    },
+    {
+      title: "Lorem ipsum dolor sit amet Lorem ipsum",
+    },
+    {
+      title: "Lorem ipsum dolor sit amet Lorem ipsum",
+    },
+    {
+      title: "Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem iamet",
+    },
+    {
+      title: "Lorem ipsum dolor sit amet Lorem ipsum",
+    },
+  ];
   return (
     <>
       <button
         onClick={() => {
-          setIsOpen(index);
+          isOpen ? setIsOpen(false) : setIsOpen(true);
         }}
         className="docs__container__wrapper__sidebar__btn"
       >
         <div className="docs__container__wrapper__sidebar__btn__title">
-          Lorem ipsum dolor sit amet
+          {title}
         </div>
-        <div className="docs__container__wrapper__sidebar__btn__svg__animated">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="feather feather-chevron-right"
-          >
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
-        </div>
+        {isOpen ? (
+          <div className="docs__container__wrapper__sidebar__btn__svg__animated">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-chevron-right"
+            >
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </div>
+        ) : (
+          <div className="docs__container__wrapper__sidebar__btn__svg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-chevron-right"
+            >
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </div>
+        )}
       </button>
-      {isOpen === index ? (
+      {isOpen ? (
         <>
-          <button className="docs__container__wrapper__sidebar__btn__expand">
-            Lorem ipsum, dolor sit amet consecte
-          </button>
-          <button className="docs__container__wrapper__sidebar__btn__expand">
-            Lorem ipsum, dolor sit amet consecte
-          </button>
-          <button className="docs__container__wrapper__sidebar__btn__expand">
-            Lorem ipsum, dolor sit amet consecte
-          </button>
-          <button className="docs__container__wrapper__sidebar__btn__expand">
-            Lorem ipsum, dolor sit amet consecte
-          </button>
-          <button className="docs__container__wrapper__sidebar__btn__expand">
-            Lorem ipsum, dolor sit amet consecte
-          </button>
-          <button className="docs__container__wrapper__sidebar__btn__expand">
-            Lorem ipsum, dolor sit amet consecte
-          </button>
+          {SideBarExpandEntry.map((item) => (
+            <button className="docs__container__wrapper__sidebar__btn__expand">
+              {item.title}
+            </button>
+          ))}
         </>
-      ) : (
-        <>hello</>
-      )}
+      ) : null}
     </>
   );
 }
 
 function SideBar() {
-  const list = [
+  const [isSearch, setIsSearch] = useState(false);
+  const [isSideBar, setIsSideBar] = useState(false);
+  useEffect(() => {
+    if (window.innerWidth < 800) {
+      setIsSideBar(false);
+    } else {
+      setIsSideBar(true);
+    }
+    window.addEventListener("resize", () => {
+      if (window.innerWidth < 800) {
+        setIsSideBar(false);
+      } else {
+        setIsSideBar(true);
+      }
+    });
+  }, []);
+
+  const SideBarTitle = [
     {
-      id: 1,
+      title: "Lorem ipsum dolor sit amet",
     },
     {
-      id: 2,
+      title: "Lorem ipsum dolor sit Lorem amet",
     },
     {
-      id: 3,
+      title: "Lorem ipsum dolor sit amet Lorem ",
     },
     {
-      id: 4,
+      title: "Lorem ipsum dolor sit amet Lorem ",
     },
     {
-      id: 5,
+      title: "Lorem ipsum dolor sit amet Lorem ",
     },
     {
-      id: 6,
+      title: "Lorem ipsum dolor sit amet Lorem ",
     },
     {
-      id: 7,
+      title: "Lorem ipsum dolor sit amet Lorem ",
     },
     {
-      id: 8,
+      title: "Lorem ipsum dolor sit amet Lorem ",
     },
     {
-      id: 9,
+      title: "Lorem ipsum dolor sit amet Lorem ",
     },
     {
-      id: 10,
+      title: "Lorem ipsum dolor dolordolor",
     },
     {
-      id: 11,
+      title: "Lorem ipsum dolor sit amet",
+    },
+    {
+      title: "Lorem ipsum dolor sit Lorem amet",
+    },
+    {
+      title: "Lorem ipsum dolor sit amet Lorem ",
+    },
+    {
+      title: "Lorem ipsum dolor dolordolor",
+    },
+    {
+      title: "Lorem ipsum dolor sit amet",
+    },
+    {
+      title: "Lorem ipsum dolor sit Lorem amet",
+    },
+    {
+      title: "Lorem ipsum dolor sit amet Lorem ",
+    },
+    {
+      title: "Lorem ipsum dolor dolordolor",
     },
   ];
   return (
-    <div className="docs__container__wrapper__sidebar">
-      {list.map((item, i) => (
-        <SideBarLink index={i} />
-      ))}
-    </div>
+    <>
+      {isSideBar ? (
+        <div className="docs__container__wrapper__sidebar">
+          <div className="docs__container__wrapper__sidebar__header">
+            <button
+              onClick={() => {
+                setIsSideBar(false);
+              }}
+              className="docs__container__wrapper__sidebar__header__btn"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#ffffff"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-x"
+              >
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+            <a href="#">
+              <img
+                src={logo}
+                alt="logo"
+                className="docs__container__wrapper__sidebar__header__img"
+              />
+            </a>
+
+            <button
+              onClick={() => {
+                setIsSearch(true);
+              }}
+              className="docs__container__wrapper__sidebar__header__btn"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30.621"
+                height="30.621"
+                viewBox="0 0 30.621 30.621"
+              >
+                <g
+                  id="Icon_feather-search"
+                  data-name="Icon feather-search"
+                  transform="translate(-3 -3)"
+                >
+                  <path
+                    id="Path_605"
+                    data-name="Path 605"
+                    d="M28.5,16.5a12,12,0,1,1-12-12A12,12,0,0,1,28.5,16.5Z"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="3"
+                  />
+                  <path
+                    id="Path_606"
+                    data-name="Path 606"
+                    d="M31.5,31.5l-6.525-6.525"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="3"
+                  />
+                </g>
+              </svg>
+            </button>
+          </div>
+          {isSearch ? (
+            <div className="docs__container__wrapper__sidebar__search__box">
+              <button
+                onClick={() => {
+                  setIsSearch(false);
+                }}
+                className="docs__container__wrapper__sidebar__search__close__btn"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-x"
+                >
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+              <input
+                type="text"
+                placeholder="Search here"
+                className="docs__container__wrapper__sidebar__search__box__input"
+              />
+              <div className="docs__container__wrapper__sidebar__search__box__recents">
+                Search Results
+              </div>
+              <div className="docs__container__wrapper__sidebar__search__box__recent__entry">
+                Lorem ipsum dolor sit amet consectetur.
+              </div>
+              <div className="docs__container__wrapper__sidebar__search__box__recent__entry">
+                Lorem ipsum dolor sit amet consectetur.
+              </div>
+              <div className="docs__container__wrapper__sidebar__search__box__recent__entry">
+                Lorem ipsum dolor sit amet consectetur.
+              </div>
+              <div className="docs__container__wrapper__sidebar__search__box__recent__entry">
+                Lorem ipsum dolor sit amet consectetur.
+              </div>
+              <div className="docs__container__wrapper__sidebar__search__box__recent__entry">
+                Lorem ipsum dolor sit amet consectetur.
+              </div>
+              <div className="docs__container__wrapper__sidebar__search__box__recent__entry">
+                Lorem ipsum dolor sit amet consectetur.
+              </div>
+            </div>
+          ) : null}
+          <div className="docs__container__wrapper__sidebar__divider"></div>
+          {SideBarTitle.map((item) => (
+            <SideBarLink title={item.title} />
+          ))}
+        </div>
+      ) : (
+        <button
+          onClick={() => {
+            setIsSideBar(true);
+          }}
+          className="docs__container__wrapper__sidebar__header__btn"
+          style={{ maxHeight: 40, width: 40, marginTop: 25 }}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#ffffff"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-menu"
+          >
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      )}
+    </>
   );
 }
 function DocsContent() {
@@ -191,7 +405,6 @@ function DocsContent() {
             <span>Next</span>
             Getting Started
           </div>
-
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"

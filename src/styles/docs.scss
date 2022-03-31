@@ -8,6 +8,7 @@
 .docs__container__wrapper {
   display: flex;
   width: 100%;
+  position: relative;
 }
 .docs__container__wrapper__sidebar {
   max-width: 350px;
@@ -19,7 +20,7 @@
   top: 0;
 }
 .docs__container__wrapper__sidebar::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
 }
 .docs__container__wrapper__sidebar::-webkit-scrollbar-thumb {
   background-color: white;
@@ -142,12 +143,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 0.6em;
+  margin-top: 0.8em;
   cursor: pointer;
   padding: 0;
 }
 .docs__container__wrapper__sidebar__btn__title {
   color: $white;
+  text-align: start;
+  width: 90%;
 }
 .docs__container__wrapper__sidebar__btn__svg svg {
   width: 20px;
@@ -184,14 +187,128 @@
 .docs__container__wrapper__sidebar__btn__expand {
   background: transparent;
   border: none;
-  color: $WhiteGray;
-  margin-top: 0.7em;
+  color: rgb(255, 255, 255, 0.6);
+  margin: 0.5em 0em;
   padding: 0;
   font-size: 15px;
   cursor: pointer;
+  text-align: start;
+  width: 90%;
+}
+.docs__container__wrapper__sidebar__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.docs__container__wrapper__sidebar__header__img {
+  width: 120px;
+}
+.docs__container__wrapper__sidebar__header__btn {
+  padding: 0;
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.docs__container__wrapper__sidebar__header__btn svg {
+  width: 20px;
+  height: 20px;
+}
+.docs__container__wrapper__sidebar__divider {
+  width: 100%;
+  height: 1px;
+  background: rgb(255, 255, 255, 0.4);
+  margin: 1.5em 0em;
+}
+.docs__container__wrapper__sidebar__search__box {
+  background-color: $black;
+  color: $white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99;
+  animation: sideBarSearchAnimations 500ms linear;
+  padding: 2em 1em;
+}
+.docs__container__wrapper__sidebar__search__box__input {
+  width: 100%;
+  padding: 1em;
+  color: $white;
+  background: transparent;
+  border-radius: 6px;
+  border: 1px solid rgb(255, 255, 255, 0.4);
+  outline: none;
+  margin-top: 4em;
+  margin-bottom: 1em;
+}
+.docs__container__wrapper__sidebar__search__box__input:hover,
+.docs__container__wrapper__sidebar__search__box__input:focus {
+  border-color: $white;
+  transition: 300ms ease-in-out;
+}
+@keyframes sideBarSearchAnimations {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 100vh;
+  }
+}
+.docs__container__wrapper__sidebar__search__close__btn {
+  background: rgb(255, 255, 255, 0.2);
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  border: none;
+  color: $white;
+  cursor: pointer;
+  position: absolute;
+  right: 16px;
+  top: 35px;
+}
+.docs__container__wrapper__sidebar__search__close__btn:hover {
+  color: red;
+  transition: 300ms ease-in-out;
+}
+.docs__container__wrapper__sidebar__search__box__recents {
+  margin-top: 0.5em;
+  font-size: 16px;
+  color: $white;
+  animation: animatedresult 700ms linear;
+}
+.docs__container__wrapper__sidebar__search__box__recent__entry {
+  margin-top: 0.6em;
+  color: rgb(255, 255, 255, 0.6);
+  animation: animatedresult 700ms linear;
+  text-decoration: none;
+  font-size: 16px;
+}
+@keyframes animatedresult {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @media (max-width: 1440px) {
   .docs__container__wrapper__sidebar {
     max-width: 300px;
+  }
+}
+@media (max-width: 800px) {
+  .docs__container__wrapper__sidebar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    max-width: 100%;
   }
 }
