@@ -608,6 +608,7 @@ function DocsContent() {
 export default function Docs({ setIsDocs }) {
   useEffect(() => {
     setIsDocs(true);
+    return () => setIsDocs(false);
   }, []);
 
   return (

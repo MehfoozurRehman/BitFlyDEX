@@ -44,7 +44,7 @@ function NavLink({ title, to, list }) {
     </Link>
   );
 }
-export default function Header() {
+export default function Header({ connectWallet }) {
   const [isNavOpen, setIsNavOpen] = useState(false);
   useEffect(() => {
     if (window.innerWidth <= 1200) {
@@ -84,15 +84,14 @@ export default function Header() {
       {isNavOpen ? (
         <div className="header__nav">
           <NavLink title="Home" to="/" />
-
           <NavLink
             title="IDO"
-            to="/governance-proposals"
+            to="/"
             list={[
               {
                 title: "BITFLY IDO",
                 info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-                to: "/",
+                to: "/decentralized-trading",
               },
               {
                 title: "IDO LAUNCHPAD",
@@ -113,7 +112,7 @@ export default function Header() {
           />
           <NavLink
             title="Earn"
-            to="/pool-trade"
+            to="/"
             list={[
               {
                 title: "STAKING",
@@ -123,12 +122,12 @@ export default function Header() {
               {
                 title: "FARMING",
                 info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-                to: "/",
+                to: "/farming",
               },
               {
                 title: "BONDS",
                 info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-                to: "/",
+                to: "/position-bond",
               },
               {
                 title: "FIXED DEPOSIT",
@@ -138,12 +137,12 @@ export default function Header() {
               {
                 title: "VAULTS",
                 info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-                to: "/",
+                to: "/vaults",
               },
               {
                 title: "REFERRAL",
                 info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-                to: "/",
+                to: "/refer-competition",
               },
               {
                 title: "LOREM IPSUM",
@@ -154,32 +153,32 @@ export default function Header() {
           />
           <NavLink
             title="Trade"
-            to="/trading"
+            to="/"
             list={[
               {
                 title: "SWAP",
                 info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-                to: "/",
+                to: "/swap",
               },
               {
                 title: "POOL",
                 info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-                to: "/",
+                to: "/pools",
               },
               {
                 title: "EXCHANGE",
                 info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-                to: "/",
+                to: "/exchange-landing",
               },
               {
                 title: "EXCHANGE PRO",
                 info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-                to: "/",
+                to: "/exchange-pro-landing",
               },
               {
-                title: "LOREM IPSUM",
+                title: "TRADING",
                 info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-                to: "/",
+                to: "/trading",
               },
               {
                 title: "LOREM IPSUM",
@@ -190,17 +189,17 @@ export default function Header() {
           />
           <NavLink
             title="NFT's"
-            to="/nft"
+            to="/"
             list={[
               {
                 title: "NFTs",
                 info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-                to: "/",
+                to: "/nft",
               },
               {
                 title: "NFT MARKETPLACE",
                 info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-                to: "/",
+                to: "/nft-market-place",
               },
               {
                 title: "LOREM IPSUM",
@@ -216,17 +215,17 @@ export default function Header() {
           />
           <NavLink
             title="Win"
-            to="/farming"
+            to="/"
             list={[
               {
                 title: "GOVERNANCE",
                 info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-                to: "/",
+                to: "/governance-proposals",
               },
               {
                 title: "DOCUMENTATION",
                 info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-                to: "/",
+                to: "/docs",
               },
               {
                 title: "WHITE PAPER",
@@ -246,8 +245,10 @@ export default function Header() {
           >
             $2.0454
           </Link>
-          <Link
-            to="/connect-wallet"
+          <a
+            onClick={() => {
+              connectWallet(true);
+            }}
             className="header__link__button header__link__button__secondary"
           >
             Connect Wallet
@@ -265,7 +266,7 @@ export default function Header() {
                 fill="currentColor"
               />
             </svg>
-          </Link>
+          </a>
         </div>
       ) : null}
     </div>

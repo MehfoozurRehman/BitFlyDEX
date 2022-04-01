@@ -61,7 +61,7 @@ export default function App() {
         <ResetPassword setIsResetPassword={setIsResetPassword} />
       ) : null}
       {isConfirmOTP ? <ComfirmOTP setIsConfirmOTP={setIsConfirmOTP} /> : null}
-      {isDocs ? null : <Header />}
+      {isDocs ? null : <Header connectWallet={setIsInvite} />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/governance-proposals" element={<GovernanceProposals />} />
@@ -70,7 +70,7 @@ export default function App() {
           element={<DecentralizedTrading />}
         />
         <Route
-          path="/connect-wallet"
+          path="/swap"
           element={<ConnectWallet setIsSetting={setIsSetting} />}
         />
         <Route
