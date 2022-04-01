@@ -91,7 +91,7 @@ export default function Header({ connectWallet }) {
               {
                 title: "BITFLY IDO",
                 info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
-                to: "/decentralized-trading",
+                to: "/decentralized-protocol",
               },
               {
                 title: "IDO LAUNCHPAD",
@@ -99,12 +99,12 @@ export default function Header({ connectWallet }) {
                 to: "/",
               },
               {
-                title: "LOREM IPSUM",
+                title: "BITFLY ICO",
                 info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
                 to: "/",
               },
               {
-                title: "LOREM IPSUM",
+                title: "ICO LAUNCHPAD",
                 info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
                 to: "/",
               },
@@ -159,6 +159,11 @@ export default function Header({ connectWallet }) {
                 title: "SWAP",
                 info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
                 to: "/swap",
+              },
+              {
+                title: "LIQUIDITY",
+                info: "The versatile fixed-income instrument, brought to Decentralized finance and implemented",
+                to: "/liquidity",
               },
               {
                 title: "POOL",

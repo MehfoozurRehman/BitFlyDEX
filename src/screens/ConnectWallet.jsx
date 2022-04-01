@@ -131,13 +131,15 @@ function InputBox() {
   );
 }
 
-export default function ConnectWallet({ setIsSetting }) {
-  const [selected, setSelected] = useState("SWAP");
+export default function ConnectWallet({ setIsSetting, isOn }) {
+  const [selected, setSelected] = useState(isOn);
 
   return (
     <div className="connect__main__container">
       <div className="connect__wallet__jumbotron__wrapper">
-        <h1 className="governance__jumbotron__heading">Swap</h1>
+        <h1 className="governance__jumbotron__heading">
+          {selected === "LIQUIDITY" ? "LIQUIDITY" : "Swap"}
+        </h1>
         <div className="governance__jumbotron__para">
           On-chain governance is a system for managing and implementing changes
           to cryptocurrency blockchains. In this type of governance, rules for

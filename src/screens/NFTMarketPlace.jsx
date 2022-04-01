@@ -60,7 +60,7 @@ function BuyAndSellBtn({ selected, setSelected, title, style }) {
 }
 
 export default function NFTMarketPlace() {
-  const [selected, setSelected] = useState("Buy");
+  const [selected, setSelected] = useState("Auction");
 
   return (
     <div className="nft__market__place__container">
@@ -94,13 +94,14 @@ export default function NFTMarketPlace() {
           <div className="nft__market__place__container__content__footer__left">
             <div className="nft__market__place__container__content__footer__left__btn__wrapper">
               <BuyAndSellBtn
-                title="Buy"
+                style={{ color: "#ffffff" }}
+                title="Auction"
                 selected={selected}
                 setSelected={setSelected}
               />
               <BuyAndSellBtn
-                style={{ color: "#7C323A" }}
-                title="Sell"
+                style={{ color: "#ffffff" }}
+                title="Market"
                 selected={selected}
                 setSelected={setSelected}
               />

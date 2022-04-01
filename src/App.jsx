@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import AddYourCurrencyPopup from "./screens/AddYourCurrencyPopup";
 import ComfirmOTP from "./screens/ComfirmOTP";
 import ConnectWallet from "./screens/ConnectWallet";
 import DecentralizedProtocol from "./screens/DecentralizedProtocol";
@@ -38,6 +39,7 @@ import "./styles/export.scss";
 export default function App() {
   const [isStartTrading, setIsStartTrading] = useState(false);
   const [isTransferNFT, setIsTransferNFT] = useState(false);
+  const [isAddYourCurrency, setIsAddYourCurrency] = useState(true);
   const [isInvite, setIsInvite] = useState(false);
   const [isSetting, setIsSetting] = useState(false);
   const [isOTP, setIsOTP] = useState(false);
@@ -51,6 +53,9 @@ export default function App() {
       ) : null}
       {isTransferNFT ? (
         <TransferNFTPopup setIsTransferNFT={setIsTransferNFT} />
+      ) : null}
+      {isAddYourCurrency ? (
+        <AddYourCurrencyPopup setIsAddYourCurrency={setIsAddYourCurrency} />
       ) : null}
       {isInvite ? <InvitePopup setIsInvite={setIsInvite} /> : null}
       {isSetting ? <SettingPopup setIsSetting={setIsSetting} /> : null}
@@ -71,7 +76,13 @@ export default function App() {
         />
         <Route
           path="/swap"
-          element={<ConnectWallet setIsSetting={setIsSetting} />}
+          element={<ConnectWallet setIsSetting={setIsSetting} isOn="SWAP" />}
+        />
+        <Route
+          path="/liquidity"
+          element={
+            <ConnectWallet setIsSetting={setIsSetting} isOn="LIQUIDITY" />
+          }
         />
         <Route
           path="/trading"
